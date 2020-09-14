@@ -3572,7 +3572,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".hand {\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9zcG90bGV4L2Zyb250ZW5kL3NyYy9hcHAvY3VzdG9tZXIvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sYW5kaW5nL2xhbmRpbmcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9jdXN0b21lci9sYW5kaW5nL2xhbmRpbmcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGFuZHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufSIsIi5oYW5kIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".hand {\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY3VzdG9tZXIvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvY3VzdG9tZXIvbGFuZGluZy9sYW5kaW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhhbmR7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn0iLCIuaGFuZCB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn0iXX0= */";
     /***/
   },
 
@@ -3672,7 +3672,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9zcG90bGV4L2Zyb250ZW5kL3NyYy9hcHAvY3VzdG9tZXIvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQUE7QUNDSjs7QURFQTtFQUNJLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLDZCQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURDQTtFQUNJLFVBQUE7QUNFSiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbS1tYXJnaW57XHJcbiAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG59XHJcblxyXG4uYWNjb3VudC1mb3Jte1xyXG4gICAgbWF4LXdpZHRoOiA3MDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLnZhbGlkYXRpb24tZXJyb3Ige1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbiIsIi5jdXN0b20tbWFyZ2luIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmFjY291bnQtZm9ybSB7XG4gIG1heC13aWR0aDogNzAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDEwMHB4IGF1dG8gIWltcG9ydGFudDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4udmFsaWRhdGlvbi1lcnJvciB7XG4gIGNvbG9yOiByZWQ7XG59Il19 */";
+    __webpack_exports__["default"] = ".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSw2QkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxVQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b20tbWFyZ2lue1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxufVxyXG5cclxuLmFjY291bnQtZm9ybXtcclxuICAgIG1heC13aWR0aDogNzAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMTAwcHggYXV0byAhaW1wb3J0YW50O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi52YWxpZGF0aW9uLWVycm9yIHtcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4iLCIuY3VzdG9tLW1hcmdpbiB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5hY2NvdW50LWZvcm0ge1xuICBtYXgtd2lkdGg6IDcwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnZhbGlkYXRpb24tZXJyb3Ige1xuICBjb2xvcjogcmVkO1xufSJdfQ== */";
     /***/
   },
 
@@ -6119,7 +6119,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".section-navbars {\n  padding: 2px 0 !important;\n}\n\n.order_btn {\n  padding: 0px 5px !important;\n}\n\n.navbar.navbar-expand-lg .navbar-nav li {\n  margin-right: 47px !important;\n}\n\n.hand {\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9zcG90bGV4L2Zyb250ZW5kL3NyYy9hcHAvc2hhcmVkL25hdmJhci9uYXZiYXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kseUJBQUE7QUNDSjs7QURDQTtFQUNJLDJCQUFBO0FDRUo7O0FEQ0E7RUFDSSw2QkFBQTtBQ0VKOztBREFBO0VBQ0ksZUFBQTtBQ0dKIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL25hdmJhci9uYXZiYXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VjdGlvbi1uYXZiYXJze1xyXG4gICAgcGFkZGluZzogMnB4IDAgIWltcG9ydGFudDtcclxufVxyXG4ub3JkZXJfYnRue1xyXG4gICAgcGFkZGluZzogMHB4IDVweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4ubmF2YmFyLm5hdmJhci1leHBhbmQtbGcgLm5hdmJhci1uYXYgbGl7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDQ3cHggIWltcG9ydGFudDtcclxufVxyXG4uaGFuZHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG4vLyAjbWVudS1kcm9wZG93biB7XHJcbi8vICAgICBtYXgtd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuLy8gfSIsIi5zZWN0aW9uLW5hdmJhcnMge1xuICBwYWRkaW5nOiAycHggMCAhaW1wb3J0YW50O1xufVxuXG4ub3JkZXJfYnRuIHtcbiAgcGFkZGluZzogMHB4IDVweCAhaW1wb3J0YW50O1xufVxuXG4ubmF2YmFyLm5hdmJhci1leHBhbmQtbGcgLm5hdmJhci1uYXYgbGkge1xuICBtYXJnaW4tcmlnaHQ6IDQ3cHggIWltcG9ydGFudDtcbn1cblxuLmhhbmQge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */";
+    __webpack_exports__["default"] = ".section-navbars {\n  padding: 2px 0 !important;\n}\n\n.order_btn {\n  padding: 0px 5px !important;\n}\n\n.navbar.navbar-expand-lg .navbar-nav li {\n  margin-right: 47px !important;\n}\n\n.hand {\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGFyZWQvbmF2YmFyL25hdmJhci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHlCQUFBO0FDQ0o7O0FEQ0E7RUFDSSwyQkFBQTtBQ0VKOztBRENBO0VBQ0ksNkJBQUE7QUNFSjs7QURBQTtFQUNJLGVBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlY3Rpb24tbmF2YmFyc3tcclxuICAgIHBhZGRpbmc6IDJweCAwICFpbXBvcnRhbnQ7XHJcbn1cclxuLm9yZGVyX2J0bntcclxuICAgIHBhZGRpbmc6IDBweCA1cHggIWltcG9ydGFudDtcclxufVxyXG5cclxuLm5hdmJhci5uYXZiYXItZXhwYW5kLWxnIC5uYXZiYXItbmF2IGxpe1xyXG4gICAgbWFyZ2luLXJpZ2h0OiA0N3B4ICFpbXBvcnRhbnQ7XHJcbn1cclxuLmhhbmR7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuLy8gI21lbnUtZHJvcGRvd24ge1xyXG4vLyAgICAgbWF4LXdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XHJcbi8vIH0iLCIuc2VjdGlvbi1uYXZiYXJzIHtcbiAgcGFkZGluZzogMnB4IDAgIWltcG9ydGFudDtcbn1cblxuLm9yZGVyX2J0biB7XG4gIHBhZGRpbmc6IDBweCA1cHggIWltcG9ydGFudDtcbn1cblxuLm5hdmJhci5uYXZiYXItZXhwYW5kLWxnIC5uYXZiYXItbmF2IGxpIHtcbiAgbWFyZ2luLXJpZ2h0OiA0N3B4ICFpbXBvcnRhbnQ7XG59XG5cbi5oYW5kIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */";
     /***/
   },
 
@@ -6427,7 +6427,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var environment = {
-      production: true,
+      production: false,
       url: '3.11.134.243',
       // url: 'http://127.0.0.1:8000',
       frontEndUrl: 'http://127.0.0.1:4200'
@@ -6510,7 +6510,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /var/www/html/project/spotlex/frontend/src/main.ts */
+    /*! /var/www/html/project/frontend/src/main.ts */
     "./src/main.ts");
     /***/
   }
