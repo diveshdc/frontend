@@ -1,0 +1,188 @@
+    <section class="checkout-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="section-header">
+                        <h2>Times<a href="#">Edit</a></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="collaction">
+                                <h4 class="hand">Collaction time</h4>
+                                <p-calendar
+                                [(ngModel)]="value"
+                                placeholder="MM/DD/YYYY"
+                                [readonlyInput]="true"
+                                [minDate]="minDate"
+                                [maxDate]="maxDate"
+                                yearRange="2001:2018"
+                                [monthNavigator]="true"
+                                [yearNavigator]="true"
+                                dateFormat="MM d, yy"
+                                [showIcon]="true"
+                                (onSelect)="onDateSelected($event, 0)"
+                            >
+                            </p-calendar>
+                                <td>{{collectionDateTime | date:'MMM-dd-yyyy '}}</td>
+                                <p>{{ setCollectionSlotValue }}</p>
+                            </div>
+                        </div>
+                        <p-dialog header="Select a collection time slot" [(visible)]="displayCollection" [style]="{width: '20vw'}" [baseZIndex]="10000">
+                            <table style="text-align: center; margin-left: 50px;">
+                                <tr>
+                                  <th>Collection Timeslot</th>
+                                </tr>
+                                <tr  *ngFor="let slots of collectionSlot; let i =index">
+                                  <td [ngClass]="{'success-msg': slots.blocked_collection_slot === 0, 'gray':slots.blocked_collection_slot === 1}" (click)="selectedCollectionSlot(slots)">
+                                    <a class="hand">
+                                      {{slots.collection_time_start}}-{{slots.collection_time_end}}
+                                    </a>
+                                </td>
+                                </tr>
+                              </table>
+                           
+                        <!-- <p-footer>
+                            <button type="button" pButton icon="pi pi-check" (click)="displayBasic=false" label="Yes"></button>
+                            <button type="button" pButton icon="pi pi-times" (click)="displayBasic=false" label="No" class="ui-button-secondary"></button>
+                        </p-footer> -->
+                    </p-dialog>
+                        <p-dialog header="Select a delivery time slot" [(visible)]="displayDelivery" [style]="{width: '20vw'}" [baseZIndex]="10000">
+                            <table style="text-align: center; margin-left: 50px;">
+                                <tr>
+                                  <th>Delivery Timeslot</th>
+                                </tr>
+                                <tr  *ngFor="let slots of deliverySlot; let i =index">
+                                 <td [ngClass]="{'success-msg': slots.blocked_delivery_slot === 0, 'gray':slots.blocked_delivery_slot === 1}" (click)="selectedDeliverySlot(slots)">
+                                    <a class="hand">
+                                      {{slots.delivery_time_start}}-{{slots.delivery_time_end}}
+                                    </a>
+                                </td>
+                                </tr>
+                              </table>
+                        
+                        <!-- <p-footer>
+                            <button type="button" pButton icon="pi pi-check" (click)="displayBasic=false" label="Yes"></button>
+                            <button type="button" pButton icon="pi pi-times" (click)="displayBasic=false" label="No" class="ui-button-secondary"></button>
+                        </p-footer> -->
+                    </p-dialog>
+                            <div class="col-sm-6">
+                            <div class="collaction">
+                                <h4 class="hand">Delivery time</h4>
+                                <p-calendar
+                                [(ngModel)]="value"
+                                placeholder="MM/DD/YYYY"
+                                [readonlyInput]="true"
+                                [minDate]="minDate"
+                                [maxDate]="maxDate"
+                                yearRange="2001:2018"
+                                [monthNavigator]="true"
+                                [yearNavigator]="true"
+                                dateFormat="MM d, yy"
+                                [showIcon]="true"
+                                (onSelect)="onDateSelected($event,1)"
+                            >
+                            </p-calendar>
+                            <td>{{deliveryDateTime | date:'MMM-dd-yyyy '}}</td>
+                            <p>{{setDeliverySlotValue}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <a href="#" class="a-link">Save date to calendar</a> -->
+                    <h3>Delevery Instruction</h3>
+                    <!-- <form [formGroup]="deliveryNotesForm"> -->
+                    <textarea  [(ngModel)]="delivery_notes" placeholder="Cleaning instructions (optional)"></textarea>
+                    <!-- </form> -->
+                </div>
+                <div class="col-sm-6">
+                    <div class="checkout-box">
+                        <div class="checkout-header">
+                            <h2>Checkout</h2>
+                        </div>
+                        <div class="checkout-body">
+                            <form [formGroup]="couponForm" (ngSubmit)="applyCoupon()">
+                            <div class="code-here">
+                                <input type="text" formControlName="coupon_code" placeholder="Voucher Code">
+                                <input type="submit" value="Submit" class="btn-back">
+                            </div>
+                            <!-- <span  class="validation-error">{{errorMessage}}</span> -->
+                            <!-- <span  class="success-msg">{{successMsg}}</span> -->
+                            <div class="validation-error" *ngFor="let validation of account_validation_messages.coupon_code">
+                                <span class="validation-error"
+                                    *ngIf="couponForm.get('coupon_code').hasError(validation.type) && (couponForm.get('coupon_code').dirty || couponForm.get('coupon_code').touched)">*{{validation.message}}
+                                </span>
+                            </div>
+                        </form>
+                            <div class="subtotal">
+                                <h5>Subtotal<span>£{{finalPrice}}</span></h5>
+                                <hr>
+                                <h4>Total<span>£{{finalPrice}}</span></h4>
+                            </div>
+                            <input type="button" value="Place order" (click)="addCardDetails()" class="theme-btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a (click)="goBack()" class="btn-back hand">Back</a>
+        </div>
+    </section>
+    <section class="select-cart">
+        <div class="container">
+           <div class="row">
+               <div class="col-sm-7">
+                       <h4>Minimum Order Value $15</h4>
+               </div>
+               <!-- <div class="col-sm-5 text-right">
+                   <h4>Total: $ 5.20</h4>
+               </div>     -->
+               <div class="col-sm-7">
+                   <a href="#" class="support-here">
+                     <span> <i class="fa fa-commenting" aria-hidden="true"></i></span>
+                       Support
+                   </a>
+               </div> 
+                 <!-- <div class="col-sm-5 text-right">
+                   <a href="#" class="your-basket">
+                       Your Basket<i class="fa fa-angle-right" aria-hidden="true"></i>
+                   </a>
+                 </div> -->
+           </div>
+       </div>
+       <p-dialog header="Add card details to make a payment" [(visible)]="addCard" [style]="{width: '50vw'}" [baseZIndex]="10000">
+        <form [formGroup]="AddCardForm" (ngSubmit)="addCardToPay()" >
+          <div class="form-container" style="background:#f7fcff">
+                <input id="column-left" type="text" formControlName="name_on_card"  placeholder="Name"/>
+                <div class="validation-error" *ngFor="let validation of account_validation_messages.name_on_card">
+                    <span class="validation-error"
+                        *ngIf="AddCardForm.get('name_on_card').hasError(validation.type) && (AddCardForm.get('name_on_card').dirty || AddCardForm.get('name_on_card').touched)">*{{validation.message}}
+                    </span>
+                </div>
+                <input id="input-field" type="text" formControlName="card_no" placeholder="Card Number"/>
+                <div class="validation-error" *ngFor="let validation of account_validation_messages.card_no">
+                    <span class="validation-error"
+                        *ngIf="AddCardForm.get('card_no').hasError(validation.type) && (AddCardForm.get('card_no').dirty || AddCardForm.get('card_no').touched)">*{{validation.message}}
+                    </span>
+                </div>
+                <input id="column-left" type="text" formControlName="expiry_month"  placeholder="Expiry Month">
+                <div class="validation-error" *ngFor="let validation of account_validation_messages.expiry_month">
+                    <span class="validation-error"
+                        *ngIf="AddCardForm.get('expiry_month').hasError(validation.type) && (AddCardForm.get('expiry_month').dirty || AddCardForm.get('expiry_month').touched)">*{{validation.message}}
+                    </span>
+                </div>
+                <input id="column-left" type="text" formControlName="expiry_year"  placeholder="Expiry Year">
+                <div class="validation-error" *ngFor="let validation of account_validation_messages.expiry_year">
+                    <span class="validation-error"
+                        *ngIf="AddCardForm.get('expiry_year').hasError(validation.type) && (AddCardForm.get('expiry_year').dirty || AddCardForm.get('expiry_year').touched)">*{{validation.message}}
+                    </span>
+                </div>
+                <input id="column-right" type="text"  formControlName="cvv" placeholder="CCV"/>
+                <div class="validation-error" *ngFor="let validation of account_validation_messages.cvv">
+                    <span class="validation-error"
+                        *ngIf="AddCardForm.get('cvv').hasError(validation.type) && (AddCardForm.get('cvv').dirty || AddCardForm.get('cvv').touched)">*{{validation.message}}
+                    </span>
+                </div>
+                <input type="submit" value="Pay Now" class="theme-btn">
+            </div>
+          </form>
+        </p-dialog>
+   </section>

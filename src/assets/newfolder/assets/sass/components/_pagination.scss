@@ -1,0 +1,101 @@
+//     <div class="pagination buttons"> 
+//     <ul>
+//         <li class="prev_btn"><a href="#">d </a></li>
+//         <li><a href="#">1</a></li>
+//         <li><a href="#">2</a></li>
+//         <li class="next_btn"><a href="#">></a></li>
+//     </ul>
+// </div>
+.paginations {
+    &.buttons {
+        li {
+            &.prev_btn {
+                margin-right: 30px
+            }
+            &.next_btn {
+                margin-left: 10px;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $color-secondary;
+                font-size: 14px;
+                line-height: 19px;
+                font-family: $sans-montserrat;
+                font-style: normal;
+                letter-spacing: 0.02em;
+                font-weight: $font-weight-normal;
+                &:hover,
+                &:focus {
+                    color: $color-secondary;
+                    font-weight: $font-weight-bold;
+                }
+                &.active {
+                    color: $color-primary;
+                    font-weight: $font-weight-bold;
+                }
+            }
+            &.prev_btn,
+            &.next_btn {
+                a {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(3px);
+                    border: 1px solid $color-primary;
+                    color: $color-primary;
+                    .arrow_svg,
+                    svg {
+                        fill: $color-primary;
+                        width: 20px;
+                        height: 9px;
+                        path {
+                            fill: $color-primary;
+                        }
+                    }
+                    &:hover,
+                    &:focus,
+                    {
+                        background: radial-gradient(68.49px at 87.74% 82.86%, #357BFF 0%, #2FBBFF 100%);
+                        ;
+                        color: $color-white;
+                        border-color: transparent;
+                        .arrow_svg,
+                        svg {
+                            fill: $color-white;
+                            path {
+                                fill: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+            &.active {
+                a {
+                    background: radial-gradient(68.49px at 87.74% 82.86%, #357BFF 0%, #2FBBFF 100%);
+                    ;
+                    color: $color-white;
+                    border-color: transparent;
+                    .arrow_svg,
+                    svg {
+                        fill: $color-white;
+                        path {
+                            fill: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

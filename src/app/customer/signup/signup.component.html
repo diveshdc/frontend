@@ -1,0 +1,251 @@
+<div class="tab-pane fade" id="account-setting" role="tabpanel" aria-labelledby="dashboard-tabs-2">
+    <div class="dashboard-tabs-content-box">
+        <div class="dashboard-tabs-content-title">
+            <h3>Account Details</h3>
+        </div>
+        <div class="dashboard-tabs-content-inn">
+            <form [formGroup]="userSignupForm" (ngSubmit)="signUp()" class="row">
+                <div class="col-md-5">
+                    <div class="dashboard-form-wrap">
+                        <div class="form-group  form-row">
+                            <label for="inputState" class="col-sm-3 col-form-label">Select Address<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9">
+                                <select id="inputState" formControlName="address" class="form-control arrow-down  form-control-lg">
+                                    <option selected="">Your Post Code</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.address">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('address').hasError(validation.type) && (userSignupForm.get('address').dirty || userSignupForm.get('address').touched)">*{{validation.message}}</span>
+                        </div>
+                        <div class="form-group form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Post Code<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-6 input-group">
+                                <input type="text" formControlName="postcode" class="form-control form-control-lg"
+                                    placeholder="se187bg">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-1.png"
+                                            alt="form-field-icon-1.png" /></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 ">
+                                <button type="button" class="btn w-100 h-100 find-btn btn-success">Find <i
+                                        class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.postcode">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('postcode').hasError(validation.type) && (userSignupForm.get('postcode').dirty || userSignupForm.get('postcode').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Building Name or
+                                Number<span class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="building_name_no" class="form-control form-control-lg"
+                                    placeholder="Building Name or Number">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-2.png"
+                                            alt="form-field-icon-2.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.building_name_no">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('building_name_no').hasError(validation.type) && (userSignupForm.get('building_name_no').dirty || userSignupForm.get('building_name_no').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Street Name<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9  input-group">
+                                <input type="text"  formControlName="street_name" class="form-control form-control-lg"
+                                    placeholder="Street Name">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-3.png"
+                                            alt="form-field-icon-3.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.street_name">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('street_name').hasError(validation.type) && (userSignupForm.get('street_name').dirty || userSignupForm.get('street_name').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Town<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9  input-group">
+                                <input type="text"  formControlName="town" class="form-control form-control-lg"
+                                    placeholder="Town">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-4.png"
+                                            alt="form-field-icon-4.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.town">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('town').hasError(validation.type) && (userSignupForm.get('town').dirty || userSignupForm.get('town').touched)">*{{validation.message}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <div class="dashboard-form-wrap">
+                        <div class="form-group  form-row">
+                            <label for="inputState" class="col-sm-3 col-form-label">First Name<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="first_name" class="form-control form-control-lg"
+                                    placeholder="Enter Your First Name">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-5.png"
+                                            alt="form-field-icon-5.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.first_name">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('first_name').hasError(validation.type) && (userSignupForm.get('first_name').dirty || userSignupForm.get('first_name').touched)">*{{validation.message}}</span>
+                        </div>
+                        <div class="form-group form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Last Name<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="last_name" class="form-control form-control-lg"
+                                    placeholder="Enter Your Last Name">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-5.png"
+                                            alt="form-field-icon-5.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.last_name">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('last_name').hasError(validation.type) && (userSignupForm.get('last_name').dirty || userSignupForm.get('last_name').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Email Address<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="email" class="form-control form-control-lg"
+                                    placeholder="Enter Your Email Address">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-6.png"
+                                            alt="form-field-icon-6.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.email">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('email').hasError(validation.type) && (userSignupForm.get('email').dirty || userSignupForm.get('email').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Password<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="password" class="form-control form-control-lg"
+                                    placeholder="Enter Your Current Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-7.png"
+                                            alt="form-field-icon-7.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.password">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('password').hasError(validation.type) && (userSignupForm.get('password').dirty || userSignupForm.get('password').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Create New Password
+                            </label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="new_password" class="form-control form-control-lg"
+                                    placeholder="Enter Your New Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-8.png"
+                                            alt="form-field-icon-8.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.new_password">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('new_password').hasError(validation.type) && (userSignupForm.get('new_password').dirty || userSignupForm.get('new_password').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Confirm Password
+                            </label>
+                            <div class="col-sm-9 input-group">
+                                <input type="text" formControlName="password_confirmation" class="form-control form-control-lg"
+                                    placeholder="Confirm Your New Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-8.png"
+                                            alt="form-field-icon-8.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.password_confirmation">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('password_confirmation').hasError(validation.type) && (userSignupForm.get('password_confirmation').dirty || userSignupForm.get('password_confirmation').touched)">*{{validation.message}}</span>
+                        </div>
+
+                        <div class="form-group  form-row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Phone Number<span
+                                    class="required">*</span></label>
+                            <div class="col-sm-9 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">
+                                        <select class="selectpicker" data-width="fit">
+                                            <option
+                                                data-content='<span class="flag-icon flag-icon-us"></span>'>
+                                            </option>
+                                            <option
+                                                data-content='<span class="flag-icon flag-icon-mx"></span>'>
+                                            </option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <input type="text" formControlName="phone_number" class="form-control form-control-lg"
+                                    placeholder="123 456 7890">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><img
+                                            src="assets/images/form-field-icon-9.png"
+                                            alt="form-field-icon-9.png" /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="validation-error" *ngFor="let validation of account_validation_messages.phone_number">
+                            <span class="validation-error"
+                                *ngIf="userSignupForm.get('phone_number').hasError(validation.type) && (userSignupForm.get('phone_number').dirty || userSignupForm.get('phone_number').touched)">*{{validation.message}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="buttons-outer text-center">
+                        <button class="btn primary_border_btn nm_btn" type="button">Back</button>
+                        <button type="button" (click)="signUp()" class="btn primary_btn nm_btn">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

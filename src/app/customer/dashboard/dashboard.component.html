@@ -1,0 +1,590 @@
+<section class="dashboard-main">
+    <div class="title">
+        <h2>Welcome Maria!</h2>
+    </div>
+    <div class="dashboard-inner">
+        <ul class="nav" id="dashboard-tabs">
+            <li (click)="showChat()">
+                <a class="hand" id="help-ssupport-block">
+                    <div class="dashboard-menu-box">
+                        <h3>Help</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon1.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class=" hand" id="dashboard-tabs-1" data-toggle="tab" routerLink="/neworder" routerLinkActive="active" role="tab"
+                    aria-controls="place-new-order" aria-selected="true">
+                    <div class="dashboard-menu-box">
+                        <h3>PLACE NEW ORDER</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon2.png" alt="dashboard-menu-icon2.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li (click)="getAccountSetting()">
+                <a id="dashboard-tabs-2" data-toggle="tab" href="#account-setting" role="tab"
+                    aria-controls="account-setting" aria-selected="false">
+                    <div class="dashboard-menu-box">
+                        <h3>ACCOUNT SETTING</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon3.png" alt="dashboard-menu-icon3.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li (click)="getOrderHistory()">
+                <a id="dashboard-tabs-3" data-toggle="tab" href="#order-history" role="tab"
+                    aria-controls="order-history" aria-selected="false">
+                    <div class="dashboard-menu-box">
+                        <h3>ORDER HISTORY</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon4.png" alt="dashboard-menu-icon4.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id="dashboard-tabs-4" data-toggle="tab" href="#refer-friend" role="tab" aria-controls="refer-friend"
+                    aria-selected="false">
+                    <div class="dashboard-menu-box">
+                        <h3>REFER YOUR FRIENDS</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon5.png" alt="dashboard-menu-icon5.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id="dashboard-tabs-5" class="active" data-toggle="tab" href="#loyality-point" role="tab"
+                    aria-controls="loyality-point" aria-selected="false">
+                    <div class="dashboard-menu-box">
+                        <h3>LOYALTY POINTS</h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon6.png" alt="dashboard-menu-icon6.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li (click)="getCouponVoucher()">
+                <a id="dashboard-tabs-6" data-toggle="tab" href="#coupen" role="tab" aria-controls="coupen"
+                    aria-selected="false">
+                    <div class="dashboard-menu-box">
+                        <h3>COUPON/VOUCHER </h3>
+                        <figure class="footer-icon">
+                            <img src="assets/images/dashboard-menu-icon7.png" alt="dashboard-menu-icon7.png" />
+                        </figure>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <!-- <a href="javascript:void(0);"> -->
+                    <div *ngIf="showSupport" (click)="closeChat()" class="chat-support-wrap show">
+                        <div class="char-tile">
+                            <h3>Live Support chat</h3>
+                            <a click="closeChat()" class="chat-close-btn hand"><span class="cust-clr">X</span></a>
+                        </div>
+                        <div class="chat-support-content-wrap">
+                            <ul>
+                                <li>
+                                    <div class="chat-box">
+                                        <figure class="img-box"
+                                            style="background-image:url('assets/images/avtar-1.png')">
+                                        </figure>
+                                        <div class="chat-text-box">
+                                            <p>Hello! Can I help you?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-box user-chat">
+                                        <figure class="img-box"
+                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
+                                        <div class="chat-text-box">
+                                            <p>Yes, can I pay via PayPal?</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="chat-box">
+                                        <figure class="img-box"
+                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
+                                        <div class="chat-text-box">
+                                            <p>Sure you can!</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="chat-box user-chat">
+                                        <figure class="img-box"
+                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
+                                        <div class="chat-text-box">
+                                            <p>Thanks</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="type-msg-wrap">
+                                <input type="text" class="form-control" placeholder="Enter your message" />
+                            </div>
+                        </div>
+
+                    </div>
+                <!-- </a> -->
+            </li>
+        </ul>
+        <div class="tab-content" id="dashboard-tabs-content">
+
+            <div class="tab-pane fade " id="place-new-order" role="tabpanel" aria-labelledby="dashboard-tabs-1">
+
+                <div class="dashboard-tabs-content-box">
+                    <div class="dashboard-tabs-content-title">
+                        <h3>Cooming Soon</h3>
+                    </div>
+                    <div class="dashboard-tabs-content-inn">
+                        working...
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="account-setting" role="tabpanel" aria-labelledby="dashboard-tabs-2">
+
+                <div class="dashboard-tabs-content-box">
+                    <div class="dashboard-tabs-content-title">
+                        <h3>Account Details</h3>
+                    </div>
+                    <div class="dashboard-tabs-content-inn">
+                        <form [formGroup]="userInfoForm" (ngSubmit)="updateUserInfo()" class="row">
+                            <div class="col-md-5">
+                                <div class="dashboard-form-wrap">
+                                    <div class="form-group  form-row">
+                                        <label for="inputState" class="col-sm-3 col-form-label">Select Address<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9">
+                                            <!-- *ngFor="let addr of fullAddress" -->
+                                            <select id="inputState" formControlName="address" class="form-control arrow-down  form-control-lg">
+                                                <option selected="selected">Your Post Code</option>
+                                                <option  [value]="fullAddress"><option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.address">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('address').hasError(validation.type) && (userInfoForm.get('address').dirty || userInfoForm.get('address').touched)">*{{validation.message}}</span>
+                                    </div>
+                                    <div class="form-group form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Post Code<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-6 input-group">
+                                            <input type="text" formControlName="postcode" [(ngModel)]="post_code"  class="form-control form-control-lg"
+                                                placeholder="se187bg">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-1.png"
+                                                        alt="form-field-icon-1.png" /></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 ">
+                                            <button type="button" (click)="checkPostCode()" class="btn w-100 h-100 find-btn btn-success">Find <i
+                                                    class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.postcode">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('postcode').hasError(validation.type) && (userInfoForm.get('postcode').dirty || userInfoForm.get('postcode').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Building Name or
+                                            Number<span class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="text" formControlName="building_name_no" class="form-control form-control-lg"
+                                                placeholder="Building Name or Number">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-2.png"
+                                                        alt="form-field-icon-2.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.building_name_no">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('building_name_no').hasError(validation.type) && (userInfoForm.get('building_name_no').dirty || userInfoForm.get('building_name_no').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Street Name<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9  input-group">
+                                            <input type="text"  formControlName="street_name" class="form-control form-control-lg"
+                                                placeholder="Street Name">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-3.png"
+                                                        alt="form-field-icon-3.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.street_name">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('street_name').hasError(validation.type) && (userInfoForm.get('street_name').dirty || userInfoForm.get('street_name').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Town<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9  input-group">
+                                            <input type="text"  formControlName="town" class="form-control form-control-lg"
+                                                placeholder="Town">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-4.png"
+                                                        alt="form-field-icon-4.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.town">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('town').hasError(validation.type) && (userInfoForm.get('town').dirty || userInfoForm.get('town').touched)">*{{validation.message}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 offset-md-1">
+                                <div class="dashboard-form-wrap">
+                                    <div class="form-group  form-row">
+                                        <label for="inputState" class="col-sm-3 col-form-label">First Name<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="text" formControlName="first_name" class="form-control form-control-lg"
+                                                placeholder="Enter Your First Name">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-5.png"
+                                                        alt="form-field-icon-5.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.first_name">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('first_name').hasError(validation.type) && (userInfoForm.get('first_name').dirty || userInfoForm.get('first_name').touched)">*{{validation.message}}</span>
+                                    </div>
+                                    <div class="form-group form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Last Name<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="text" formControlName="last_name" class="form-control form-control-lg"
+                                                placeholder="Enter Your Last Name">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-5.png"
+                                                        alt="form-field-icon-5.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.last_name">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('last_name').hasError(validation.type) && (userInfoForm.get('last_name').dirty || userInfoForm.get('last_name').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Email Address<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="text" disabled="disabled" formControlName="email" class="form-control form-control-lg"
+                                                placeholder="Enter Your Email Address">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-6.png"
+                                                        alt="form-field-icon-6.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.email">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('email').hasError(validation.type) && (userInfoForm.get('email').dirty || userInfoForm.get('email').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Password<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="password" formControlName="password" class="form-control form-control-lg"
+                                                placeholder="Enter Your Current Password">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-7.png"
+                                                        alt="form-field-icon-7.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.password">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('password').hasError(validation.type) && (userInfoForm.get('password').dirty || userInfoForm.get('password').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Create New Password
+                                        </label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="password" formControlName="new_password" class="form-control form-control-lg"
+                                                placeholder="Enter Your New Password">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-8.png"
+                                                        alt="form-field-icon-8.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.new_password">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('new_password').hasError(validation.type) && (userInfoForm.get('new_password').dirty || userInfoForm.get('new_password').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Confirm Password
+                                        </label>
+                                        <div class="col-sm-9 input-group">
+                                            <input type="password" formControlName="password_confirmation" class="form-control form-control-lg"
+                                                placeholder="Confirm Your New Password">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-8.png"
+                                                        alt="form-field-icon-8.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.password_confirmation">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('password_confirmation').hasError(validation.type) && (userInfoForm.get('password_confirmation').dirty || userInfoForm.get('password_confirmation').touched)">*{{validation.message}}</span>
+                                    </div>
+
+                                    <div class="form-group  form-row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label">Phone Number<span
+                                                class="required">*</span></label>
+                                        <div class="col-sm-9 input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon3">
+                                                    <select class="selectpicker" data-width="fit">
+                                                        <option
+                                                            data-content='<span class="flag-icon flag-icon-us"></span>'>
+                                                        </option>
+                                                        <option
+                                                            data-content='<span class="flag-icon flag-icon-mx"></span>'>
+                                                        </option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                            <input type="text" formControlName="phone_number" class="form-control form-control-lg"
+                                                placeholder="123 456 7890">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/form-field-icon-9.png"
+                                                        alt="form-field-icon-9.png" /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validation-error" *ngFor="let validation of account_validation_messages.phone_number">
+                                        <span class="validation-error"
+                                            *ngIf="userInfoForm.get('phone_number').hasError(validation.type) && (userInfoForm.get('phone_number').dirty || userInfoForm.get('phone_number').touched)">*{{validation.message}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="buttons-outer text-center">
+                                    <button class="btn primary_border_btn nm_btn" type="button">Back</button>
+                                    <button type="button" (click)="updateUserInfo()" class="btn primary_btn nm_btn">Save Changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="tab-pane fade" id="order-history" role="tabpanel" aria-labelledby="dashboard-tabs-3">
+                <div class="dashboard-tabs-content-box">
+                    <div class="dashboard-tabs-content-title">
+                        <h3>Check your order history</h3>
+                    </div>
+                    <div class="dashboard-tabs-content-inn">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="dashboard-history-table-wrap">
+                                    <table id="order-table" class="table table-striped table-bordered"
+                                        style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Order</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let orderItem of allOrders">
+                                                <td><a href="#" class="">#{{orderItem.id}}</a></td>
+                                                <td>{{orderItem.updated_at}}</td>
+                                                <td>{{orderItem.status}}</td>
+                                                <td>{{orderItem.actual_price}}</td>
+                                                <td><a class="link_bttn hand" (click)="viewOrderDetail(orderItem.id)">View</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="order-details-wrap">
+                                    <div class="title">
+                                        <h3>Order details</h3>
+                                        <p>Order #{{orderDetail?.id}} was placed on January 14, 2019 and is currently Processing</p>
+                                    </div>
+                                    <div class="table-wrap table-row">
+                                        <table class="table order-detail-table" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th><a href="#">{{orderDetail?.order_history[0].name}}</a> </th>
+                                                    <td>£1.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Subtotal:</th>
+                                                    <td><strong>£1.50</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Paymnet Method:</th>
+                                                    <td>Debit/Credit Card</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>TOTAL:</th>
+                                                    <td><strong>£1.50</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-row schedule-collection-wrap">
+                                        <p><strong>Schedule your collection date:</strong> 14 January, 2019</p>
+                                    </div>
+
+
+                                    <div class="table-wrap table-row">
+                                        <table class="table order-detail-table" style="width:100%">
+                                            <tbody>
+                                                <tr>
+                                                    <th><strong>Select your collection day and time slots:</strong></th>
+                                                    <td>Wednesday - 19:00-20:00</td>
+                                                </tr>
+                                            </tbody >
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="billing-adress-wrap table-row">
+                                        <h3>Billing address</h3>
+                                        <p>Patrick Ejezie<br />
+                                            2 Burrage Place,<br />
+                                            SE18 78G<br />
+                                            Info.spotlex@gmail.com</p>
+                                    </div>
+
+                                    <div class="table-row order-detail-button text-right">
+                                        <button class="btn primary_btn">Reorder</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="refer-friend" role="tabpanel" aria-labelledby="dashboard-tabs-3">
+                <div class="dashboard-tabs-content-box">
+                    <div class="dashboard-tabs-content-title">
+                        <h3>Refer Your Friends</h3>
+                    </div>
+                    <div class="dashboard-tabs-content-inn row">
+                        <div class="col-md-2 offset-md-2">
+                            <div class="sm-buttons-outer">
+                                <ul>
+                                    <li>
+                                        <a href="www.facebook.com" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                            Share on Facebook </a>
+                                    </li>
+                                    <li>
+                                        <a href="www.twitter.com" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                            Share on Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="www.gmail.com" class="googlePlus"><i class="fa fa-google-plus"
+                                                aria-hidden="true"></i> Share on Google+</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 offset-md-1">
+                            <div class="reger-frient-content">
+                                <h4>Refer friends now</h4>
+                                <p>When your friend completes their first Spotlex order using your referral code, you'll
+                                    receive £10 of Spotlex credit</p>
+
+                                <div class="newsletter-wrap">
+                                    <form>
+                                        <input type="text" class="form-control" value="ORDER1" readonly />
+                                        <button type="button" class="btn primary_btn">Copy</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade active show" id="loyality-point" role="tabpanel"
+                aria-labelledby="dashboard-tabs-3">
+                <div class="dashboard-tabs-content-box">
+                    <div class="dashboard-tabs-content-title">
+                        <h3>Loyalty Points</h3>
+                    </div>
+                    <div class="dashboard-tabs-content-inn text-center">
+                        <h3>You have {{loyalityPoint}} points</h3>
+                        <p>For every pound you spend you earn one point. Once you reach 150 points, you will
+                            receive<br /> a 10GBP discount to use on future orders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="coupen" role="tabpanel" aria-labelledby="dashboard-tabs-3">
+                    <div class="dashboard-tabs-content-box">
+                        <div class="dashboard-tabs-content-title">
+                            <div class="row mr-lf">
+                            <div *ngFor="let item of Coupons" class="box">
+                                <div class="inner">
+                                 <p>Coupon Code:-{{item.coupon_code}}</p>
+                                    <div class="coupon">
+                                    <span class="scissors">✂</span>
+                                    <span class="code">{{item.price}} {{item.discount_type}}</span>  
+                                    </div>
+                              </div>
+                             </div>
+                             </div>
+                            </div>
+                        <!-- <div class="dashboard-tabs-content-inn">
+                            working...
+                        </div> -->
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>

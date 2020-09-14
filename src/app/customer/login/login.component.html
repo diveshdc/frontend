@@ -1,0 +1,42 @@
+<div class="page-header" filter-color="orange">
+    <!-- <div class="page-header-image" style="background-image:url('../../../assets/assets/images/login-form-before.png')"> -->
+    <div class="container">
+        <section class="account_main login_sec">
+            <div class="container">
+                <div class="account-form login-form">
+                    <div class="account-form-inn">
+                        <div class="account-title">
+                            <h3>SIGN IN</h3>
+                        </div>
+                          <div class="account-from-block">
+                            <form [formGroup]="userLoginForm" (ngSubmit)="getUserLogin()">
+                                <div class="form-group">
+                                    <input type="email" formControlName="email" class="form-control" placeholder="Email address">
+                                </div>
+                                <div *ngFor="let validation of account_validation_messages.email">
+                                    <span class="validation-error"
+                                        *ngIf="userLoginForm.get('email').hasError(validation.type) && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)">*{{validation.message}}</span>
+                                </div>
+                                <div class="form-group"
+                                    [ngClass]="{'has-error':userLoginForm.get('email').invalid && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)}">
+                                </div>
+                                <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                                <div *ngFor="let validation of account_validation_messages.password">
+                                    <span class="validation-error"
+                                        *ngIf="userLoginForm.get('password').hasError(validation.type) && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)">*{{validation.message}}</span>
+                                </div>
+                                <div class="form-group account-from-btn-block custom-margin">
+                                    <button type="submit" class="btn primary_btn nm_btn">SIGN IN</button>
+                                    <a data-target="#resetpass" routerLinkActive="active"  data-toggle="modal"  class="link-btn">Forgot Password?</a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- </div> -->
+</div>
+<!-- <p-toast position="top-right"></p-toast> -->

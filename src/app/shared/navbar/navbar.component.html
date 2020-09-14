@@ -1,0 +1,51 @@
+
+<div class="section section-navbars">
+    <div class="container" id="menu-dropdown">
+        <div class="row">
+                <!--------Header Start---------->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="assets/images/logo.png" alt="logo.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li *ngIf="!signInButton" class="nav-item ">
+                        <a class="nav-link"  routerLink="login" routerLinkActive="active">Sign In</a>
+                    </li>
+                    <li *ngIf="signInButton" class="nav-item ">
+                        <a class="nav-link"  routerLink="/dashboard" routerLinkActive="active">My Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#" routerLinkActive="active" >Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">DOWNLOAD THE APP</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" routerLink="/commercial" routerLinkActive="active">Commercial</a> -->
+                        <a class="nav-link" href="http://52.56.145.178/index.php/commercial/">Commercial</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" routerLink="/refer-to-friend" routerLinkActive="active">Refer a friend</a> -->
+                        <a class="nav-link" href="http://52.56.145.178/index.php/refer-a-friend">Refer a friend</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a *ngIf="!signInButton" class="nav-link order_btn" routerLink="/login" routerLinkActive="active">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a *ngIf="signInButton" class="nav-link order_btn hand" (click)="logOut()" routerLinkActive="active">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <!-- End Navbar Transparent-->
+        </div>
+    </div>
+</div>

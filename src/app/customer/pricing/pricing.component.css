@@ -1,0 +1,34 @@
+.hand{
+    cursor: pointer;
+}
+.quantity-badge{
+    border: 1px solid #00ae;
+    width: 30px;
+    height: 30px;    
+    font-size: 23px;
+    border-radius: 100%;    
+    
+    background-color: #00adee; 
+    font-size:17px;  
+    position: absolute; top:0; right:57px;                                                                                                                                                                                                                                                                                                                                                                                                    
+}
+
+.content-area{word-break: break-all;}
+
+.bottom-text{padding-top: 40px; bottom: 0;}
+.contentScroll{max-height: 85px; overflow: auto;}
+
+.disabled{
+    opacity: 0.6;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+@media screen and (min-width: 1500px){
+.container {
+    max-width: 1470px;
+}
+a.your-basket {
+    margin-right: 25px;
+}
+}

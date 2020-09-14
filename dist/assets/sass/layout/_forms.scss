@@ -1,0 +1,126 @@
+select.form-control:not([size]):not([multiple]),
+.form-control {
+    height: 52px;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 1px solid #dedede;
+    font-family: $sans-poppins;
+    font-size: 16px;
+    color: $color-black;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    background-color: transparent;
+    letter-spacing: 0.01em;
+
+    @include breakpoint(desktop)
+                {
+                        height: 47px;
+                        font-size: 14px;
+                }
+
+    &.active {
+        border-color: $color-primary;
+    }
+    &:focus {
+        border-color: $color-primary;
+    }
+    &.arrow-down {
+        background-image: url(../images/arrow-down.png);
+        background-repeat: no-repeat;
+        background-position: 98% 50%;
+        background-size: 12px 8px;
+        padding-right:40px;
+    }
+
+
+    &.form-textarea {
+        height: 150px !important;
+        resize: none;
+        padding-top: 12px;
+    }
+    &.small_size {
+        height: 40px;
+        padding: 11px 20px;
+    }
+    &.large_size {
+        height: 50px;
+        padding: 16px 20px;
+    }
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #9399A0;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #9399A0;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #9399A0;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: #9399A0;
+    }
+}
+
+select.form-control:not([size]):not([multiple]) {
+    line-height: 1.5;
+}
+
+.search {
+    position: relative;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid $color-field-border;
+    background-color: $color-grey-field;
+    form {
+        height: 100%;
+        width: 100%;
+    }
+    .form-control {
+        height: 100%;
+        border-radius: 0;
+        border: 0;
+        background-color: transparent;
+    }
+    .seacrh-icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit_btn {
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        background: radial-gradient(95.63px at 87.74% 82.86%, #357BFF 0%, #2FBBFF 100%);
+        ;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        cursor: pointer;
+        .sub_btn_svg {
+            width: 16px;
+            height: 6.91px;
+            fill: $color-white;
+            rect {
+                width: 16px;
+                height: 6.91px;
+            }
+        }
+        &:hover,
+        &:focus {
+            background: radial-gradient(193.20px at 87.74% 82.86%, #357BFF 0%, #2FBBFF 100%);
+            color: $color-white;
+        }
+    }
+}
