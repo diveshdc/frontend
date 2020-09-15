@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
-  moduleId: module.id,
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
