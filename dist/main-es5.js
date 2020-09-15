@@ -5253,13 +5253,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../environments/environment */
-    "./src/environments/environment.ts");
-    /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
 
@@ -5268,8 +5262,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, AuthService);
 
         this.http = http;
-        this.apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url;
-        this.apiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].url;
+        this.apiUrl = 'http://3.11.134.243';
       }
       /*
       * API for Manage Users
@@ -5385,13 +5378,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     AuthService.ctorParameters = function () {
       return [{
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
       }];
     };
 
     AuthService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])], AuthService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], AuthService);
     /***/
   },
 
@@ -6428,9 +6421,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var environment = {
       production: false,
-      url: '3.11.134.243',
-      // url: 'http://127.0.0.1:8000',
-      frontEndUrl: 'http://127.0.0.1:4200'
+      url: 'http://3.11.134.243'
     };
     /***/
   },
