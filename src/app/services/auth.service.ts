@@ -76,7 +76,7 @@ getCartItems(userId) {
   }
 
   getCoupon() {
-    return this.http.get(this.apiUrl + '/api/getcoupons');
+    return this.http.get(this.apiUrl + '/api/getcoupons/');
   }
 
 

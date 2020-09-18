@@ -3188,7 +3188,7 @@ let AuthService = class AuthService {
         localStorage.removeItem('la_user_token_data');
     }
     getCoupon() {
-        return this.http.get(this.apiUrl + '/api/getcoupons');
+        return this.http.get(this.apiUrl + '/api/getcoupons/');
     }
     /**
      * Function to show toastr message
@@ -3288,7 +3288,7 @@ let PriceService = class PriceService {
     *
     */
     addToCart(cartData) {
-        return this.http.post(this.apiUrl + '/api/add_and_remove_cart/', cartData);
+        return this.http.post(this.apiUrl + '/api/add_and_remove_cart', cartData);
     }
 };
 PriceService.ctorParameters = () => [
