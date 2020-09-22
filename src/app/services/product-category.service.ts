@@ -6,11 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductCategoryService {
-  public apiUrl: string = environment.url;
-
-  constructor(private http: HttpClient) {
-    this.apiUrl = environment.url;
-  }
+  public apiUrl = 'http://3.11.134.243';
+  constructor( private http: HttpClient) {
+    this.apiUrl = 'http://3.11.134.243';
+   }
 
      /*
   * API for Get Category List
@@ -19,5 +18,4 @@ export class ProductCategoryService {
  getCategoryList(userId) {
   return this.http.post(this.apiUrl + '/api/getcategory_list', userId);
 }
-
 }

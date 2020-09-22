@@ -8,10 +8,11 @@ import { ROUTER_CONFIGURATION } from '@angular/router';
 })
 export class AuthService {
 
-  public apiUrl: 'http://3.11.134.243';
+  public apiUrl = 'http://3.11.134.243';
   constructor( private http: HttpClient) {
     this.apiUrl = 'http://3.11.134.243';
    }
+
 
    /*
   * API for Manage Users

@@ -19,12 +19,12 @@
                     </div>
                     <div class="dashboard-tabs-content-inn">
                         <form [formGroup]="informationForm" (ngSubmit)="EditAddress()" class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="dashboard-form-wrap">
                                     <div class="form-group  form-row">
-                                        <label for="inputState" class="col-sm-6 col-form-label">Select Address<span
+                                        <label for="inputState" class="col-sm-4 col-form-label">Select Address<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-8">
                                             <select id="inputState" class="form-control arrow-down  form-control-lg">
                                                 <option selected="">Your Post Code</option>
                                                 <option ></option>
@@ -36,9 +36,9 @@
                                             *ngIf="informationForm.get('address').hasError(validation.type) && (informationForm.get('address').dirty || informationForm.get('address').touched)">*{{validation.message}}</span>
                                     </div>
                                     <div class="form-group form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Post Code<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Post Code<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-6 input-group">
+                                        <div class="col-sm-5 input-group">
                                             <input type="text" formControlName="postcode" [(ngModel)]="post_code" class="form-control form-control-lg"
                                                 placeholder="se187bg">
                                             <div class="input-group-append">
@@ -60,9 +60,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Building Name or
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Building Name or
                                             Number<span class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="building_name_no" class="form-control form-control-lg"
                                                 placeholder="Building Name or Number">
                                             <div class="input-group-append">
@@ -78,9 +78,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Street Name<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Street Name<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9  input-group">
+                                        <div class="col-sm-8  input-group">
                                             <input type="text"  formControlName="street_name" class="form-control form-control-lg"
                                                 placeholder="Street Name">
                                             <div class="input-group-append">
@@ -96,9 +96,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Town<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Town<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9  input-group">
+                                        <div class="col-sm-8  input-group">
                                             <input type="text"  formControlName="town" class="form-control form-control-lg"
                                                 placeholder="Town">
                                             <div class="input-group-append">
@@ -114,12 +114,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 offset-md-1">
+                            <div class="col-md-12">
                                 <div class="dashboard-form-wrap">
                                     <div class="form-group  form-row">
-                                        <label for="inputState" class="col-sm-3 col-form-label">First Name<span
+                                        <label for="inputState" class="col-sm-4 col-form-label">First Name<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="first_name" class="form-control form-control-lg"
                                                 placeholder="Enter Your First Name">
                                             <div class="input-group-append">
@@ -134,9 +134,9 @@
                                             *ngIf="informationForm.get('first_name').hasError(validation.type) && (informationForm.get('first_name').dirty || informationForm.get('first_name').touched)">*{{validation.message}}</span>
                                     </div>
                                     <div class="form-group form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Last Name<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Last Name<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="last_name" class="form-control form-control-lg"
                                                 placeholder="Enter Your Last Name">
                                             <div class="input-group-append">
@@ -152,9 +152,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Email Address<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Email Address<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="email" disabled="disabled" class="form-control form-control-lg"
                                                 placeholder="Enter Your Email Address">
                                             <div class="input-group-append">
@@ -170,9 +170,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Password<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Password<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="password" class="form-control form-control-lg"
                                                 placeholder="Enter Your Current Password">
                                             <div class="input-group-append">
@@ -188,9 +188,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Create New Password
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Create New Password
                                         </label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="new_password" class="form-control form-control-lg"
                                                 placeholder="Enter Your New Password">
                                             <div class="input-group-append">
@@ -206,9 +206,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Confirm Password
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Confirm Password
                                         </label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <input type="text" formControlName="password_confirmation" class="form-control form-control-lg"
                                                 placeholder="Confirm Your New Password">
                                             <div class="input-group-append">
@@ -224,9 +224,9 @@
                                     </div>
             
                                     <div class="form-group  form-row">
-                                        <label for="inputPassword" class="col-sm-3 col-form-label">Phone Number<span
+                                        <label for="inputPassword" class="col-sm-4 col-form-label">Phone Number<span
                                                 class="required">*</span></label>
-                                        <div class="col-sm-9 input-group">
+                                        <div class="col-sm-8 input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon3">
                                                     <select class="selectpicker" data-width="fit">

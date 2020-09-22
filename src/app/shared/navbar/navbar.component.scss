@@ -6,7 +6,7 @@
 }
 
 .navbar.navbar-expand-lg .navbar-nav li{
-    margin-right: 47px !important;
+    margin-right: 0 !important;
 }
 .hand{
     cursor: pointer;
@@ -14,3 +14,18 @@
 // #menu-dropdown {
 //     max-width: 100% !important;
 // }
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link{white-space: nowrap;}
+.navbar.navbar-expand-lg .navbar-nav li{
+    margin-left: 40px !important;
+}
+    .navbar-expand-lg .navbar-collapse{flex:1;}
+    .navbar-expand-lg .navbar-nav{margin-left:auto;}
+}
+
+@media screen and (min-width: 1500px){
+    .container {
+        max-width: 1470px;
+    }
+}
