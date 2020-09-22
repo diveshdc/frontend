@@ -3134,8 +3134,8 @@ __webpack_require__.r(__webpack_exports__);
 let AuthService = class AuthService {
     constructor(http) {
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
    * API for Manage Users
@@ -3189,7 +3189,7 @@ let AuthService = class AuthService {
         localStorage.removeItem('la_user_token_data');
     }
     getCoupon() {
-        return this.http.get(this.apiUrl + '/api/getcoupons/');
+        return this.http.get(this.apiUrl + '/api/getcoupons');
     }
     /**
      * Function to show toastr message
@@ -3272,15 +3272,15 @@ __webpack_require__.r(__webpack_exports__);
 let PriceService = class PriceService {
     constructor(http) {
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
    * API for Get Pricing
    *
    */
     getPriceList() {
-        return this.http.get(this.apiUrl + '/api/admin/pricelist/');
+        return this.http.get(this.apiUrl + '/api/admin/pricelist');
     }
     /*
     * API for Get Pricing
@@ -3323,8 +3323,8 @@ __webpack_require__.r(__webpack_exports__);
 let ProductCategoryService = class ProductCategoryService {
     constructor(http) {
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
  * API for Get Category List

@@ -5264,8 +5264,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, AuthService);
 
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Manage Users
@@ -5350,7 +5350,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getCoupon",
         value: function getCoupon() {
-          return this.http.get(this.apiUrl + '/api/getcoupons/');
+          return this.http.get(this.apiUrl + '/api/getcoupons');
         }
         /**
          * Function to show toastr message
@@ -5484,8 +5484,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, PriceService);
 
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Get Pricing
@@ -5496,7 +5496,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(PriceService, [{
         key: "getPriceList",
         value: function getPriceList() {
-          return this.http.get(this.apiUrl + '/api/admin/pricelist/');
+          return this.http.get(this.apiUrl + '/api/admin/pricelist');
         }
         /*
         * API for Get Pricing
@@ -5568,8 +5568,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, ProductCategoryService);
 
         this.http = http;
-        this.apiUrl = 'http://3.11.134.243';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Get Category List

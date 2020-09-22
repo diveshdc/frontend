@@ -8,9 +8,9 @@ import { ROUTER_CONFIGURATION } from '@angular/router';
 })
 export class AuthService {
 
-  public apiUrl = 'http://3.11.134.243';
+  public apiUrl = 'http://3.8.237.213';
   constructor( private http: HttpClient) {
-    this.apiUrl = 'http://3.11.134.243';
+    this.apiUrl = 'http://3.8.237.213';
    }
 
 
@@ -77,7 +77,7 @@ getCartItems(userId) {
   }
 
   getCoupon() {
-    return this.http.get(this.apiUrl + '/api/getcoupons/');
+    return this.http.get(this.apiUrl + '/api/getcoupons');
   }
 
 
