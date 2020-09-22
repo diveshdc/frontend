@@ -24,7 +24,7 @@ export class PriceService {
   *
   */
  addToCart(cartData) {
-  return this.http.post(this.apiUrl + '/api/add_and_remove_cart/', cartData);
+  return this.http.post(this.apiUrl + '/api/add_and_remove_cart', cartData);
 }
 
 }
