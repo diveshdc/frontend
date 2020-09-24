@@ -217,20 +217,20 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-jQuery("#imageUpload").change(function() {
-    readURL(this);
-});
+// jQuery("#imageUpload").change(function() {
+//     readURL(this);
+// });
 
 // show error message function
-function printErrorMsg (msg) {
-            $(".print-error-msg").find("ul").html('');
-            $(".print-error-msg").css('display','block');
-            $.each( msg, function(key, value ) {
-                $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
-            });
-        }
+// function printErrorMsg (msg) {
+//             $(".print-error-msg").find("ul").html('');
+//             $(".print-error-msg").css('display','block');
+//             $.each( msg, function(key, value ) {
+//                 $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+//             });
+//         }
 
-<!--SMOOTH SCROLL FUNCTION-->
+// <!--SMOOTH SCROLL FUNCTION-->
 
     // $('a[href*=#]:not([href=#])').click(function()
     // {
@@ -251,56 +251,56 @@ function printErrorMsg (msg) {
     //     }
     // });
 
-    function ckeckPostCode($this) {
-        console.log($("input[name=post_code]").val());
-             $.ajax({
-                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                    type: 'POST',
-                    url: 'user/check-post-code', //Make sure your URL is correct
-                    dataType: 'json', //Make sure your returning data type dffine as json
-                    data: {
-                        'post_code':$("input[name=post_code]").val(),
-                    },
-                    beforeSend: function(){
-                        // Show loader container
-                        $("#go_find").hide();
-                        // $("#post_code_button").attr("disabled", true);
-                        $("#check_postcode_loader").show();
-                    },
-                    success: function(response){
-                        console.log(response,'responseresponseresponse');
-                       if($.isEmptyObject(response.error) && response.status === true){
-                            $('.post-code-error').hide();
-                            document.getElementById('street').value= response.data.route;
-                            document.getElementById('town').value= response.data.postal_town;
-                        console.log(response.data.postal_town,'pooopooooo')
-                            $("#check_postcode_loader").hide();
-                           $("#go_find").show();
-                            // window.location.href = "signup";
-                        }else if(response.status === 'notFullCode'){
-                            $("#check_postcode_loader").hide();
-                            $("#go_find").show();
-                            console.log(response.message);
-                            printErrorMsg(response.message)
-                        }
-                       else if(!$.isEmptyObject(response.error)) {
-                        console.log('oiuoiuo');
-                            $("#check_postcode_loader").hide();
-                            $("#go_find").show();
-                             printErrorMsg(response.error)
-                       }else{
-                            printErrorMsg(response.error);
-                            }
-                    },
-                    error:function(response){
-                         printErrorMsg(response.error);
-                    },
-                    done: function (data) {
-                        alert('dasdas============');
+    // function ckeckPostCode($this) {
+    //     console.log($("input[name=post_code]").val());
+    //          $.ajax({
+    //                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+    //                 type: 'POST',
+    //                 url: 'user/check-post-code', //Make sure your URL is correct
+    //                 dataType: 'json', //Make sure your returning data type dffine as json
+    //                 data: {
+    //                     'post_code':$("input[name=post_code]").val(),
+    //                 },
+    //                 beforeSend: function(){
+    //                     // Show loader container
+    //                     $("#go_find").hide();
+    //                     // $("#post_code_button").attr("disabled", true);
+    //                     $("#check_postcode_loader").show();
+    //                 },
+    //                 success: function(response){
+    //                     console.log(response,'responseresponseresponse');
+    //                    if($.isEmptyObject(response.error) && response.status === true){
+    //                         $('.post-code-error').hide();
+    //                         document.getElementById('street').value= response.data.route;
+    //                         document.getElementById('town').value= response.data.postal_town;
+    //                     console.log(response.data.postal_town,'pooopooooo')
+    //                         $("#check_postcode_loader").hide();
+    //                        $("#go_find").show();
+    //                         // window.location.href = "signup";
+    //                     }else if(response.status === 'notFullCode'){
+    //                         $("#check_postcode_loader").hide();
+    //                         $("#go_find").show();
+    //                         console.log(response.message);
+    //                         printErrorMsg(response.message)
+    //                     }
+    //                    else if(!$.isEmptyObject(response.error)) {
+    //                     console.log('oiuoiuo');
+    //                         $("#check_postcode_loader").hide();
+    //                         $("#go_find").show();
+    //                          printErrorMsg(response.error)
+    //                    }else{
+    //                         printErrorMsg(response.error);
+    //                         }
+    //                 },
+    //                 error:function(response){
+    //                      printErrorMsg(response.error);
+    //                 },
+    //                 done: function (data) {
+    //                     // alert('dasdas============');
                         
-                    }
-                });
-            }
+    //                 }
+    //             });
+    //         }
 
 // $('#go_find').click(function(){
 //   var autocomplete;
@@ -377,7 +377,7 @@ function printErrorMsg (msg) {
 //             });
 //     }
 
-      var page = 1;
+    //   var page = 1;
     // $(window).scroll(function() {
     //     if($(window).scrollTop() + $(window).height() >= $(document).height()) {
     //         page++;

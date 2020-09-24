@@ -34,7 +34,9 @@ export class LoginComponent implements OnInit {
             email: ['', [Validators.required,
                         Validators.pattern('^[a-zA-Z0-9_!#$%&\'*+/=? \\"`{|}~^.-]+@[a-zA-Z0-9.-]+$'),
                         ValidationService.avoidEmptyStrigs]],
-            password : ['', [Validators.required, Validators.minLength(6)]]
+            password : ['', [Validators.required, Validators.minLength(6)]],
+            device_type: 'website',
+            device_token: '1234567890',
             });
     }
 
@@ -49,7 +51,7 @@ export class LoginComponent implements OnInit {
               await this.authservice.showToastrMessage('success', 'User Login', res['message']);
                 localStorage.setItem('la_user_token', res['token']);
                 localStorage.setItem('la_user_token_data', JSON.stringify(res['data']));
-                this.route.navigate(['']);
+                this.route.navigate(['/order']);
             } else if (res['status'] === false) {
               this.toastr.error(res['message'], 'Spotlex');
             } else {
@@ -57,7 +59,7 @@ export class LoginComponent implements OnInit {
               this.toastr.error(res['message'], 'Spotlex');
             }
           }, (error) => {
-            this.authservice.showToastrMessage('error', 'Spotlex', error.error.message);
+            this.toastr.error('error', error.error.message);
           })
     }
       /**
