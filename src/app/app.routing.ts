@@ -19,7 +19,6 @@ import { SignupComponent } from './customer/signup/signup.component';
 const routes: Routes = [
     // { path: '', redirectTo: '', pathMatch: 'full' },
     { path: '', component: LandingComponent, pathMatch: 'full' , canActivate: [AuthGuard]},
-    { path: 'index',       component: ComponentsComponent },
     { path: 'login',       component: LoginComponent },
     { path: 'profile',     component: ProfileComponent },
     { path: 'order',     component: PricingComponent },
@@ -31,7 +30,6 @@ const routes: Routes = [
     { path: 'checkout/:skip', component: CheckoutComponent },
     { path: 'checkout',     component:  CheckoutComponent},
     { path: 'signup',     component:  SignupComponent},
-    { path: 'basket',     component:  BasketComponent},
 ];
 
 @NgModule({

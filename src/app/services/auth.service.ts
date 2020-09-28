@@ -10,7 +10,7 @@ export class AuthService {
 
   public apiUrl = 'localhost:8000';
   constructor( private http: HttpClient) {
-    this.apiUrl = 'http://3.11.134.243';
+ this.apiUrl = 'http://3.11.134.243';
    }
 
 

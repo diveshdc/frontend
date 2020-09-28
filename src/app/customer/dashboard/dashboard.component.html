@@ -1,13 +1,13 @@
 <section class="dashboard-main">
     <div class="title">
-        <h2>Welcome Maria!</h2>
+        <h2>Welcome {{userName}}!</h2>
     </div>
     <div class="dashboard-inner">
         <ul class="nav" id="dashboard-tabs">
-            <li (click)="showChat()">
-                <a class="hand" id="help-ssupport-block">
+            <li>
+                <a class="hand" id="help-ssupport-block" data-toggle="modal" data-target="#helpModal">
                     <div class="dashboard-menu-box">
-                        <h3>Help</h3>
+                        <h3>HELP</h3>
                         <figure class="footer-icon">
                             <img src="assets/images/dashboard-menu-icon1.png" />
                         </figure>
@@ -81,62 +81,23 @@
                 </a>
             </li>
             <li>
-                <!-- <a href="javascript:void(0);"> -->
-                    <div *ngIf="showSupport" (click)="closeChat()" class="chat-support-wrap show">
-                        <div class="char-tile">
-                            <h3>Live Support chat</h3>
-                            <a click="closeChat()" class="chat-close-btn hand"><span class="cust-clr">X</span></a>
-                        </div>
-                        <div class="chat-support-content-wrap">
-                            <ul>
-                                <li>
-                                    <div class="chat-box">
-                                        <figure class="img-box"
-                                            style="background-image:url('assets/images/avtar-1.png')">
-                                        </figure>
-                                        <div class="chat-text-box">
-                                            <p>Hello! Can I help you?</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="chat-box user-chat">
-                                        <figure class="img-box"
-                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
-                                        <div class="chat-text-box">
-                                            <p>Yes, can I pay via PayPal?</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="chat-box">
-                                        <figure class="img-box"
-                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
-                                        <div class="chat-text-box">
-                                            <p>Sure you can!</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="chat-box user-chat">
-                                        <figure class="img-box"
-                                            style="background-image:url('assets/images/avtar-1.png')"></figure>
-                                        <div class="chat-text-box">
-                                            <p>Thanks</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                            <div class="type-msg-wrap">
-                                <input type="text" class="form-control" placeholder="Enter your message" />
-                            </div>
-                        </div>
-
+            <div class="modal fade HelpModal" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="assets/images/chat.png" class="modalChatIcon" alt="">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="assets/images/close.svg" alt=""></span>
+                        </button>
                     </div>
-                <!-- </a> -->
+                    <div class="modal-body text-center">
+                    <h3>How Can We Help?</h3>
+                    <a href="" class="mt-4 mb-3">SEND US AN EMAIL</a>
+                    <a href="">FAQ</a>
+                    </div>
+                    </div>
+                </div>
+        </div>
             </li>
         </ul>
         <div class="tab-content" id="dashboard-tabs-content">
@@ -165,14 +126,11 @@
                             <div class="col-md-5">
                                 <div class="dashboard-form-wrap">
                                     <div class="form-group  form-row">
-                                        <label for="inputState" class="col-sm-3 col-form-label">Select Address<span
+                                        <label for="inputState" class="col-sm-3 col-form-label">Address<span
                                                 class="required">*</span></label>
                                         <div class="col-sm-9">
-                                            <!-- *ngFor="let addr of fullAddress" -->
-                                            <select id="inputState" formControlName="address" class="form-control arrow-down  form-control-lg">
-                                                <option selected="selected">Your Post Code</option>
-                                                <option  [value]="fullAddress"><option>
-                                            </select>
+                                            <input type="text"  formControlName="address"  class="form-control form-control-lg"
+                                            placeholder="Address">
                                         </div>
                                     </div>
                                     <div class="validation-error" *ngFor="let validation of account_validation_messages.address">
@@ -406,13 +364,61 @@
                         </form>
                     </div>
                 </div>
-            </div>
-
-            
+            </div>      
             <div class="tab-pane fade" id="order-history" role="tabpanel" aria-labelledby="dashboard-tabs-3">
+                
+<!-- <div class="container"> -->
+    <div class="dashboard-tabs-content-title">
+            <span><img src="assets/images/currentorder.png" width="30px;" height="30px" alt="form-field-icon-9.png" />Current Order</span>  
+    </div>
+        <!--Current Order Start-->
+            <div class="currentOrder-Widget">
+                <div class="currentOrderRow" *ngFor="let currentItem of currentOrders">
+                    <p class="d-flex justify-content-between align-items-center preparingOrder">
+                        <label>Preparing Order: <a href="#"> # {{currentItem.id}}</a></label>
+                        <a  href="#" class="btn primary_btn"><span>0</span> items</a>
+                    </p>
+                    <p class="d-sm-flex justify-content-between align-items-center totalAmountRow">
+                        <label>Total</label>
+                        <span>$ {{currentItem.final_price}}</span>
+                    </p>
+                    <p class="d-flex justify-content-between align-items-center totalAmountRow">
+                    <label class="collectionSch">Collection Scheduled</label>
+                    <span class="dateOforder">{{currentItem.collection_date | date: 'MMMM dd, yyyy'}}</span>
+                    </p>
+                    <div class="stepCurrentOrder d-flex justify-content-between mt-2">
+                        <div [class.active]="currentItem.status === 'Placed'" class="stepCol text-center">
+                            <span><img
+                                src="assets/images/placed.png"
+                                alt="form-field-icon-9.png" /></span>
+                            <label>Placed</label>
+                        </div>
+                        <div [class.active]="currentItem.status === 'Collected'" class="stepCol text-center">
+                            <span><img
+                                src="assets/images/collected.png"
+                                alt="form-field-icon-9.png" /></span>
+                            <label>Collected</label>
+                        </div>
+                        <div [class.active]="currentItem.status === 'Inprogress'" class="stepCol text-center">
+                            <span><img
+                                src="assets/images/inprogress.png"
+                                alt="form-field-icon-9.png" /></span>
+                            <label>In Progress</label>
+                        </div>
+                        <div  [class.active]="currentItem.status === 'Deliverd'" class="stepCol text-center">
+                            <span><img
+                                src="assets/images/deliverd.png"
+                                alt="form-field-icon-9.png" /></span>
+                            <label>Delivered</label>
+                        </div>
+                    </div>
+                </div><!--Row 1-->
+            </div>
+        <!--Current Order Ends-->
+        <!-- </div> -->
                 <div class="dashboard-tabs-content-box">
                     <div class="dashboard-tabs-content-title">
-                        <h3>Check your order history</h3>
+                        <span><img src="assets/images/orderhistory.png" width="30px;" height="30px" alt="form-field-icon-9.png"/><h3>Check your order history</h3></span>
                     </div>
                     <div class="dashboard-tabs-content-inn">
                         <div class="row">

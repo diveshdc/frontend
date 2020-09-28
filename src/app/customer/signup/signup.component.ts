@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AuthService } from 'app/services/auth.service';
 import { Router } from '@angular/router';
 import { ValidationService } from 'app/services/validation.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,10 @@ import { ValidationService } from 'app/services/validation.service';
 export class SignupComponent implements OnInit {
   userSignupForm: FormGroup;
   public account_validation_messages = ValidationService.account_validation_messages;
-  constructor(private formBuilder: FormBuilder, private authservice: AuthService, private route: Router) {
+  constructor(private formBuilder: FormBuilder,
+              private authservice: AuthService,
+              private route: Router,
+              private toastr: ToastrService) {
     this.userSignupForm = this.formBuilder.group({
       email: ['', [Validators.required,
                    Validators.pattern('^[a-zA-Z0-9_!#$%&\'*+/=? \\"`{|}~^.-]+@[a-zA-Z0-9.-]+$'),
@@ -33,6 +37,7 @@ export class SignupComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
   }
 
   signUp() {
@@ -42,12 +47,12 @@ export class SignupComponent implements OnInit {
     } else {
       this.authservice.login(this.userSignupForm.value).subscribe(async res => {
         if (res['status'] === true) {
-          this.authservice.showToastrMessage('success', 'Spotlex', res['message']);
+          this.toastr.success(res['message'], 'Spotlex');
         } else {
-          this.authservice.showToastrMessage('error', 'Spotlex', res['message']);
+          this.toastr.error(res['message'], 'Spotlex');
         }
       }, (error) => {
-        this.authservice.showToastrMessage('error', 'Spotlex', error.error.message);
+        this.toastr.error(error.error.message, 'spotlex');
       })
     }
   }

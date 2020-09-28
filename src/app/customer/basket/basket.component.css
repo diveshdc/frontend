@@ -5,3 +5,7 @@
 .hand{
     cursor: pointer;
 }
+
+.validation-error{
+    color:red
+}

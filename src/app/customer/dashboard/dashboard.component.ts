@@ -20,6 +20,8 @@ export class DashboardComponent implements OnInit {
   orderDetail: any;
   Coupons: any;
   fullAddress: any;
+  userName: any;
+  currentOrders: any;
   constructor(private formBuilder: FormBuilder, private authservice: AuthService, private route: Router,  private toastr: ToastrService) {
     this.userInfoForm = this.formBuilder.group({
       email: ['', [Validators.required,
@@ -49,6 +51,7 @@ export class DashboardComponent implements OnInit {
       if (res['status'] === true) {
         this.loyalityPoint = res['data'].loyalty_point
         this.userId = res['data'].id
+        this.userName = res['data'].first_name
         this.userInfoForm.patchValue(res['data'])
       } else {
 
@@ -64,6 +67,7 @@ export class DashboardComponent implements OnInit {
       return true;
     } else {
       this.authservice.updateAddress(this.userInfoForm.value).subscribe(async res => {
+        console.log(res, 'ooooooooooooooooooo')
         if (res['status'] === true) {
           this.toastr.success(res['message']);
         } else {
@@ -101,13 +105,14 @@ export class DashboardComponent implements OnInit {
   checkPostCode() {
     this.authservice.checkPostCode({post_code: this.post_code}).subscribe(async res => {
       if (res['status'] === true) {
+        console.log(res, 'pppppppppppppppppppppppp')
         this.toastr.success(res['message'], 'Spotlex');
         this.userInfoForm.patchValue({
         //  address: res['data'].full_address,
          street_name: res['data'].route,
          town: res['data'].postal_town,
+         address: res['data'].full_address,
         });
-        this.fullAddress = res['data'].full_address
       } else {
         this.toastr.error(res['message'], 'Spotlex');
       }
@@ -129,7 +134,8 @@ export class DashboardComponent implements OnInit {
   getOrderHistory() {
     this.authservice.getOrderHistory({'user_id': this.userId}).subscribe(async res => {
       if (res['status'] === true) {
-        this.allOrders = res['currentOrders']
+        this.currentOrders = res['currentOrders'];
+        this.allOrders = res['pastOrders']
         this.authservice.showToastrMessage('success', 'Spotlex', res['message']);
       } else {
       }

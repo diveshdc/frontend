@@ -25,10 +25,8 @@
                                         <label for="inputState" class="col-sm-4 col-form-label">Select Address<span
                                                 class="required">*</span></label>
                                         <div class="col-sm-8">
-                                            <select id="inputState" class="form-control arrow-down  form-control-lg">
-                                                <option selected="">Your Post Code</option>
-                                                <option ></option>
-                                            </select>
+                                            <input type="text"  formControlName="address"  class="form-control form-control-lg"
+                                            placeholder="Address">
                                         </div>
                                     </div>
                                     <div class="validation-error" *ngFor="let validation of account_validation_messages.address">
