@@ -555,19 +555,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _customer_landing_landing_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./customer/landing/landing.component */ "./src/app/customer/landing/landing.component.ts");
-/* harmony import */ var _customer_login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customer/login/login.component */ "./src/app/customer/login/login.component.ts");
-/* harmony import */ var _customer_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./customer/profile/profile.component */ "./src/app/customer/profile/profile.component.ts");
-/* harmony import */ var _customer_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./customer/pricing/pricing.component */ "./src/app/customer/pricing/pricing.component.ts");
-/* harmony import */ var _customer_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./customer/dashboard/dashboard.component */ "./src/app/customer/dashboard/dashboard.component.ts");
-/* harmony import */ var _customer_commercial_commercial_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./customer/commercial/commercial.component */ "./src/app/customer/commercial/commercial.component.ts");
-/* harmony import */ var _customer_referfriend_referfriend_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./customer/referfriend/referfriend.component */ "./src/app/customer/referfriend/referfriend.component.ts");
-/* harmony import */ var _customer_track_driver_track_driver_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./customer/track-driver/track-driver.component */ "./src/app/customer/track-driver/track-driver.component.ts");
-/* harmony import */ var _customer_basket_basket_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./customer/basket/basket.component */ "./src/app/customer/basket/basket.component.ts");
-/* harmony import */ var _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./customer/checkout/checkout.component */ "./src/app/customer/checkout/checkout.component.ts");
-/* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
-/* harmony import */ var _customer_signup_signup_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./customer/signup/signup.component */ "./src/app/customer/signup/signup.component.ts");
-
+/* harmony import */ var _customer_login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./customer/login/login.component */ "./src/app/customer/login/login.component.ts");
+/* harmony import */ var _customer_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customer/profile/profile.component */ "./src/app/customer/profile/profile.component.ts");
+/* harmony import */ var _customer_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./customer/pricing/pricing.component */ "./src/app/customer/pricing/pricing.component.ts");
+/* harmony import */ var _customer_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./customer/dashboard/dashboard.component */ "./src/app/customer/dashboard/dashboard.component.ts");
+/* harmony import */ var _customer_commercial_commercial_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./customer/commercial/commercial.component */ "./src/app/customer/commercial/commercial.component.ts");
+/* harmony import */ var _customer_referfriend_referfriend_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./customer/referfriend/referfriend.component */ "./src/app/customer/referfriend/referfriend.component.ts");
+/* harmony import */ var _customer_track_driver_track_driver_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./customer/track-driver/track-driver.component */ "./src/app/customer/track-driver/track-driver.component.ts");
+/* harmony import */ var _customer_basket_basket_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./customer/basket/basket.component */ "./src/app/customer/basket/basket.component.ts");
+/* harmony import */ var _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./customer/checkout/checkout.component */ "./src/app/customer/checkout/checkout.component.ts");
+/* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
+/* harmony import */ var _customer_signup_signup_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./customer/signup/signup.component */ "./src/app/customer/signup/signup.component.ts");
 
 
 
@@ -586,18 +584,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     // { path: '', redirectTo: '', pathMatch: 'full' },
-    { path: '', component: _customer_landing_landing_component__WEBPACK_IMPORTED_MODULE_5__["LandingComponent"], pathMatch: 'full', canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'login', component: _customer_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
-    { path: 'profile', component: _customer_profile_profile_component__WEBPACK_IMPORTED_MODULE_7__["ProfileComponent"] },
-    { path: 'order', component: _customer_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_8__["PricingComponent"] },
-    { path: 'dashboard', component: _customer_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'commercial', component: _customer_commercial_commercial_component__WEBPACK_IMPORTED_MODULE_10__["CommercialComponent"] },
-    { path: 'refer-to-friend', component: _customer_referfriend_referfriend_component__WEBPACK_IMPORTED_MODULE_11__["ReferfriendComponent"] },
-    { path: 'track-driver', component: _customer_track_driver_track_driver_component__WEBPACK_IMPORTED_MODULE_12__["TrackDriverComponent"] },
-    { path: 'basket', component: _customer_basket_basket_component__WEBPACK_IMPORTED_MODULE_13__["BasketComponent"] },
-    { path: 'checkout/:skip', component: _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_14__["CheckoutComponent"] },
-    { path: 'checkout', component: _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_14__["CheckoutComponent"] },
-    { path: 'signup', component: _customer_signup_signup_component__WEBPACK_IMPORTED_MODULE_16__["SignupComponent"] },
+    { path: '', component: _customer_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"], pathMatch: 'full', canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
+    { path: 'login', component: _customer_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
+    { path: 'profile', component: _customer_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"] },
+    { path: 'order', component: _customer_pricing_pricing_component__WEBPACK_IMPORTED_MODULE_7__["PricingComponent"] },
+    { path: 'dashboard', component: _customer_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"], canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
+    { path: 'commercial', component: _customer_commercial_commercial_component__WEBPACK_IMPORTED_MODULE_9__["CommercialComponent"] },
+    { path: 'refer-to-friend', component: _customer_referfriend_referfriend_component__WEBPACK_IMPORTED_MODULE_10__["ReferfriendComponent"] },
+    { path: 'track-driver', component: _customer_track_driver_track_driver_component__WEBPACK_IMPORTED_MODULE_11__["TrackDriverComponent"] },
+    { path: 'basket', component: _customer_basket_basket_component__WEBPACK_IMPORTED_MODULE_12__["BasketComponent"] },
+    { path: 'checkout/:skip', component: _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_13__["CheckoutComponent"] },
+    { path: 'checkout', component: _customer_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_13__["CheckoutComponent"] },
+    { path: 'signup', component: _customer_signup_signup_component__WEBPACK_IMPORTED_MODULE_15__["SignupComponent"] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -610,7 +608,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
                 useHash: true
             }),
         ],
-        providers: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]],
+        providers: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]],
         exports: [],
     })
 ], AppRoutingModule);

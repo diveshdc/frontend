@@ -18,7 +18,7 @@ import { AuthGuard } from './shared/auth.guard';
 import { SignupComponent } from './customer/signup/signup.component';
 const routes: Routes = [
     // { path: '', redirectTo: '', pathMatch: 'full' },
-    { path: '', component: LandingComponent, pathMatch: 'full' , canActivate: [AuthGuard]},
+    { path: '', component: LoginComponent, pathMatch: 'full' , canActivate: [AuthGuard]},
     { path: 'login',       component: LoginComponent },
     { path: 'profile',     component: ProfileComponent },
     { path: 'order',     component: PricingComponent },
