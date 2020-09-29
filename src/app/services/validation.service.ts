@@ -86,6 +86,9 @@ export class ValidationService {
 'city': [
 { type: 'required', message: 'City is required' },
 ],
+'post_code': [
+  { type: 'required', message: 'post code is required' },
+  ],
 'state': [
 { type: 'required', message: 'State is required' },
 ],

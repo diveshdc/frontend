@@ -1,0 +1,31 @@
+<section class="no-cardSec" style="background-image:url('assets/images/no_card_banner.jpg')">
+    <div class="container">
+        <div class="no-cardSec-title">
+            <h3>We don’t cover your area yet</h3>
+            <p>But we will if we get enough votes! So register your vote now and spread the word.</p>
+        </div>
+        <div class="no_card_form">
+            <form [formGroup]="noPostCodeForm" (ngSubmit)="postCodeRequest()">
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="post_code" placeholder="Post Code" />
+                </div>
+                <div *ngFor="let validation of account_validation_messages.post_code">
+                    <span class="validation-error"
+                        *ngIf="noPostCodeForm.get('post_code').hasError(validation.type) && (noPostCodeForm.get('post_code').dirty || noPostCodeForm.get('post_code').touched)">*{{validation.message}}</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" formControlName="email" placeholder="Email Address" />
+                </div>
+                <div *ngFor="let validation of account_validation_messages.email">
+                    <span class="validation-error"
+                        *ngIf="noPostCodeForm.get('email').hasError(validation.type) && (noPostCodeForm.get('email').dirty || noPostCodeForm.get('email').touched)">*{{validation.message}}</span>
+                </div>
+
+                <div class="form-group ">
+                    <button class="btn primary_btn nm_btn" type="submit">Subcribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

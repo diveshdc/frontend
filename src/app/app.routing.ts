@@ -16,6 +16,7 @@ import { BasketComponent } from './customer/basket/basket.component';
 import { CheckoutComponent } from './customer/checkout/checkout.component';
 import { AuthGuard } from './shared/auth.guard';
 import { SignupComponent } from './customer/signup/signup.component';
+import { NopostcodeComponent } from './customer/nopostcode/nopostcode.component';
 const routes: Routes = [
     // { path: '', redirectTo: '', pathMatch: 'full' },
     { path: '', component: LoginComponent, pathMatch: 'full' , canActivate: [AuthGuard]},
@@ -30,6 +31,7 @@ const routes: Routes = [
     { path: 'checkout/:skip', component: CheckoutComponent },
     { path: 'checkout',     component:  CheckoutComponent},
     { path: 'signup',     component:  SignupComponent},
+    { path: 'no-postcode',     component:  NopostcodeComponent},
 ];
 
 @NgModule({

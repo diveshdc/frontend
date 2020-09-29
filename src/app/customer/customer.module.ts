@@ -20,6 +20,7 @@ import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
 import { ToastModule } from 'primeng/toast';
 import {ListboxModule} from 'primeng/listbox';
+import { NopostcodeComponent } from './nopostcode/nopostcode.component';
 
 @NgModule({
     imports: [
@@ -47,6 +48,7 @@ import {ListboxModule} from 'primeng/listbox';
         BasketComponent,
         CheckoutComponent,
         SignupComponent,
+        NopostcodeComponent,
     ]
 })
 export class CustomerModule { }

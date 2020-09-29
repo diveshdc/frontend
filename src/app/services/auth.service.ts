@@ -68,6 +68,11 @@ getCartItems(userId) {
     return this.http.post(this.apiUrl + '/api/updateaddress', payload);
   }
 
+
+  postcodeRequest(payload) {
+    return this.http.post(this.apiUrl + '/api/postcode_request', payload);
+  }
+
   removeItems(id) {
     return this.http.post(this.apiUrl + '/api/removeitems', id);
   }
