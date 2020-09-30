@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header\" filter-color=\"orange\">\r\n    <!-- <div class=\"page-header-image\" style=\"background-image:url('../../../assets/assets/images/login-form-before.png')\"> -->\r\n    <div class=\"container\">\r\n        <section class=\"account_main login_sec\">\r\n            <div class=\"container\">\r\n                <div class=\"account-form login-form\">\r\n                    <div class=\"account-form-inn\">\r\n                        <div class=\"account-title\">\r\n                            <h3>SIGN IN</h3>\r\n                        </div>\r\n                          <div class=\"account-from-block\">\r\n                            <form [formGroup]=\"userLoginForm\" (ngSubmit)=\"getUserLogin()\">\r\n                                <div class=\"form-group\">\r\n                                    <input type=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email address\">\r\n                                </div>\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('email').hasError(validation.type) && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                    [ngClass]=\"{'has-error':userLoginForm.get('email').invalid && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)}\">\r\n                                </div>\r\n                                <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.password\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('password').hasError(validation.type) && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group account-from-btn-block custom-margin\">\r\n                                    <button type=\"submit\" class=\"btn primary_btn nm_btn\">SIGN IN</button>\r\n                                    <a data-target=\"#resetpass\" routerLinkActive=\"active\"  data-toggle=\"modal\"  class=\"link-btn\">Forgot Password?</a>\r\n                                </div>\r\n                            </form>\r\n                        </div>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n<!-- </div> -->\r\n</div>\r\n<!-- <p-toast position=\"top-right\"></p-toast> -->\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header\" filter-color=\"orange\">\r\n    <!-- <div class=\"page-header-image\" style=\"background-image:url('../../../assets/assets/images/login-form-before.png')\"> -->\r\n    <div class=\"container\">\r\n        <section class=\"account_main login_sec\">\r\n            <div class=\"container\">\r\n                <div class=\"account-form login-form\">\r\n                    <div class=\"account-form-inn\">\r\n                        <div class=\"account-title\">\r\n                            <h3>SIGN IN</h3>\r\n                        </div>\r\n                          <div class=\"account-from-block\">\r\n                            <form [formGroup]=\"userLoginForm\" (ngSubmit)=\"getUserLogin()\">\r\n                                <div class=\"form-group\">\r\n                                    <input type=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email address\">\r\n                                </div>\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('email').hasError(validation.type) && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                    [ngClass]=\"{'has-error':userLoginForm.get('email').invalid && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)}\">\r\n                                </div>\r\n                                <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.password\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('password').hasError(validation.type) && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group account-from-btn-block custom-margin\">\r\n                                    <button type=\"submit\" class=\"btn primary_btn nm_btn\">SIGN IN</button>\r\n                                    <a data-target=\"#resetpass\" data-toggle=\"modal\" data-target=\"#helpModal\" routerLinkActive=\"active\"  data-toggle=\"modal\"  class=\"link-btn hand\">Forgot Password?</a>\r\n                                </div>\r\n                            </form>\r\n                        </div>\r\n                        <div class=\"modal fade HelpModal\" id=\"helpModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n                            <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\r\n                                <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                    <img src=\"assets/images/Password.png\" class=\"modalChatIcon\" alt=\"\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                                    <span aria-hidden=\"true\"><img src=\"assets/images/close.svg\" alt=\"\"></span>\r\n                                    </button>\r\n                                </div>\r\n                                <form [formGroup]=\"resetPasswordForm\" (ngSubmit)=\"sendLink()\">\r\n                                <div class=\"modal-body text-center\">\r\n                                <h3>Enter Your Email</h3>\r\n                                <input type=\"email\" placeholder=\"Email\" formControlName=\"email\" required class=\"form-control\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"resetPasswordForm.get('email').hasError(validation.type) && (resetPasswordForm.get('email').dirty || resetPasswordForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                [ngClass]=\"{'has-error':resetPasswordForm.get('email').invalid && (resetPasswordForm.get('email').dirty || resetPasswordForm.get('email').touched)}\">\r\n                            </div>\r\n                                <button type=\"submit\" class=\"mt-4 mb-3\">SEND RESET LINK</button>\r\n                                </div>\r\n                                </form>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n<!-- </div> -->\r\n</div>\r\n<!-- <p-toast position=\"top-right\"></p-toast> -->\r\n");
 
 /***/ }),
 
@@ -2197,7 +2197,7 @@ LandingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSw2QkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxVQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b20tbWFyZ2lue1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxufVxyXG5cclxuLmFjY291bnQtZm9ybXtcclxuICAgIG1heC13aWR0aDogNzAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMTAwcHggYXV0byAhaW1wb3J0YW50O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi52YWxpZGF0aW9uLWVycm9yIHtcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4iLCIuY3VzdG9tLW1hcmdpbiB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5hY2NvdW50LWZvcm0ge1xuICBtYXgtd2lkdGg6IDcwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnZhbGlkYXRpb24tZXJyb3Ige1xuICBjb2xvcjogcmVkO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n\n.hand {\n  cursor: pointer;\n}\n\n.HelpModal .modal-header {\n  justify-content: center;\n  position: relative;\n  border: 0;\n}\n\n.HelpModal .modal-header .modalChatIcon {\n  margin-top: -3.125rem;\n  width: 5.75rem;\n}\n\n.HelpModal .modal-header .close {\n  position: absolute;\n  right: -15px;\n  top: -15px;\n  opacity: 1;\n  padding: 0;\n  margin: 0;\n  width: 2.3125rem;\n}\n\n.HelpModal .modal-header .close img {\n  width: 100%;\n}\n\n.HelpModal .modal-body {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 2rem;\n}\n\n.HelpModal .modal-body a:hover {\n  background: #000;\n  text-decoration: none !important;\n}\n\n.HelpModal .modal-body a {\n  background: #0d92e0;\n  color: #fff;\n  border-radius: 1.875rem;\n  padding: 10px;\n  min-width: 5.625rem;\n  transition: all 0.3s;\n}\n\n.HelpModal .modal-body h3 {\n  color: #cacbcc;\n  font-weight: 700;\n}\n\n.HelpModal .modal-content {\n  border: 0;\n  border-radius: 1.25rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSw2QkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxVQUFBO0FDRUo7O0FEQUE7RUFDSSxlQUFBO0FDR0o7O0FEQUE7RUFBeUIsdUJBQUE7RUFBd0Isa0JBQUE7RUFBbUIsU0FBQTtBQ01wRTs7QURMQTtFQUF3QyxxQkFBQTtFQUFzQixjQUFBO0FDVTlEOztBRFRBO0VBQWdDLGtCQUFBO0VBQW1CLFlBQUE7RUFBWSxVQUFBO0VBQVUsVUFBQTtFQUFXLFVBQUE7RUFBVyxTQUFBO0VBQVUsZ0JBQUE7QUNtQnpHOztBRGxCQTtFQUFvQyxXQUFBO0FDc0JwQzs7QURyQkE7RUFBdUIsYUFBQTtFQUFjLHNCQUFBO0VBQXVCLHVCQUFBO0VBQXdCLG1CQUFBO0VBQW9CLG9CQUFBO0FDNkJ4Rzs7QUQ1QkE7RUFBK0IsZ0JBQUE7RUFBaUIsZ0NBQUE7QUNpQ2hEOztBRGhDQTtFQUF5QixtQkFBQTtFQUFvQixXQUFBO0VBQVksdUJBQUE7RUFBd0IsYUFBQTtFQUFjLG1CQUFBO0VBQW9CLG9CQUFBO0FDeUNuSDs7QUR4Q0E7RUFBMEIsY0FBQTtFQUFlLGdCQUFBO0FDNkN6Qzs7QUQ1Q0E7RUFBMEIsU0FBQTtFQUFTLHNCQUFBO0FDaURuQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbS1tYXJnaW57XHJcbiAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG59XHJcblxyXG4uYWNjb3VudC1mb3Jte1xyXG4gICAgbWF4LXdpZHRoOiA3MDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLnZhbGlkYXRpb24tZXJyb3Ige1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5oYW5ke1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXJ7anVzdGlmeS1jb250ZW50OiBjZW50ZXI7cG9zaXRpb246IHJlbGF0aXZlO2JvcmRlcjowO31cclxuLkhlbHBNb2RhbCAubW9kYWwtaGVhZGVyIC5tb2RhbENoYXRJY29ue21hcmdpbi10b3A6IC0zLjEyNXJlbTt3aWR0aDogNS43NXJlbTt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAuY2xvc2V7cG9zaXRpb246IGFic29sdXRlO3JpZ2h0Oi0xNXB4O3RvcDotMTVweDtvcGFjaXR5OiAxO3BhZGRpbmc6IDA7bWFyZ2luOiAwO3dpZHRoOiAyLjMxMjVyZW07fVxyXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIgLmNsb3NlIGltZ3t3aWR0aDogMTAwJTt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWJvZHl7ZGlzcGxheTogZmxleDtmbGV4LWRpcmVjdGlvbjogY29sdW1uO2p1c3RpZnktY29udGVudDogY2VudGVyO2FsaWduLWl0ZW1zOiBjZW50ZXI7cGFkZGluZy1ib3R0b206IDJyZW07fVxyXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IGE6aG92ZXJ7YmFja2dyb3VuZDogIzAwMDt0ZXh0LWRlY29yYXRpb246IG5vbmUgIWltcG9ydGFudDt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWJvZHkgYXtiYWNrZ3JvdW5kOiAjMGQ5MmUwO2NvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDEuODc1cmVtO3BhZGRpbmc6IDEwcHg7bWluLXdpZHRoOiA1LjYyNXJlbTt0cmFuc2l0aW9uOiBhbGwgLjNzO31cclxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBoM3tjb2xvcjogI2NhY2JjYztmb250LXdlaWdodDogNzAwO31cclxuLkhlbHBNb2RhbCAubW9kYWwtY29udGVudHtib3JkZXI6MDtib3JkZXItcmFkaXVzOiAxLjI1cmVtO31cclxuXHJcbiIsIi5jdXN0b20tbWFyZ2luIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmFjY291bnQtZm9ybSB7XG4gIG1heC13aWR0aDogNzAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDEwMHB4IGF1dG8gIWltcG9ydGFudDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4udmFsaWRhdGlvbi1lcnJvciB7XG4gIGNvbG9yOiByZWQ7XG59XG5cbi5oYW5kIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBib3JkZXI6IDA7XG59XG5cbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAubW9kYWxDaGF0SWNvbiB7XG4gIG1hcmdpbi10b3A6IC0zLjEyNXJlbTtcbiAgd2lkdGg6IDUuNzVyZW07XG59XG5cbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAuY2xvc2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAtMTVweDtcbiAgdG9wOiAtMTVweDtcbiAgb3BhY2l0eTogMTtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xuICB3aWR0aDogMi4zMTI1cmVtO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIgLmNsb3NlIGltZyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmctYm90dG9tOiAycmVtO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IGE6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiAjMDAwO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBhIHtcbiAgYmFja2dyb3VuZDogIzBkOTJlMDtcbiAgY29sb3I6ICNmZmY7XG4gIGJvcmRlci1yYWRpdXM6IDEuODc1cmVtO1xuICBwYWRkaW5nOiAxMHB4O1xuICBtaW4td2lkdGg6IDUuNjI1cmVtO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4zcztcbn1cblxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBoMyB7XG4gIGNvbG9yOiAjY2FjYmNjO1xuICBmb250LXdlaWdodDogNzAwO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1jb250ZW50IHtcbiAgYm9yZGVyOiAwO1xuICBib3JkZXItcmFkaXVzOiAxLjI1cmVtO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -2235,6 +2235,7 @@ let LoginComponent = class LoginComponent {
         this.toastr = toastr;
         this.getSetService = getSetService;
         this.user = [];
+        this.email = '';
         this.account_validation_messages = _services_validation_service__WEBPACK_IMPORTED_MODULE_4__["ValidationService"].account_validation_messages;
         this.data = new Date();
     }
@@ -2251,6 +2252,11 @@ let LoginComponent = class LoginComponent {
             device_type: 'website',
             device_token: '1234567890',
         });
+        this.resetPasswordForm = this.formBuilder.group({
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[a-zA-Z0-9_!#$%&\'*+/=? \\"`{|}~^.-]+@[a-zA-Z0-9.-]+$'),
+                    _services_validation_service__WEBPACK_IMPORTED_MODULE_4__["ValidationService"].avoidEmptyStrigs]],
+        });
     }
     getUserLogin() {
         if (this.userLoginForm.invalid) {
@@ -2264,6 +2270,25 @@ let LoginComponent = class LoginComponent {
                 localStorage.setItem('la_user_token_data', JSON.stringify(res['data']));
                 this.getSetService.setLoggedInStatus(true);
                 this.route.navigate(['/order']);
+            }
+            else if (res['status'] === false) {
+                this.toastr.error(res['message'], 'Spotlex');
+            }
+            else {
+                this.toastr.error(res['message'], 'Spotlex');
+            }
+        }), (error) => {
+            this.toastr.error('error', error.error.message);
+        });
+    }
+    sendLink() {
+        if (this.resetPasswordForm.invalid) {
+            this.validateAllFormFields(this.resetPasswordForm);
+            return true;
+        }
+        this.authservice.resetPassword(this.resetPasswordForm.value).subscribe((res) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (res['status'] === true) {
+                this.toastr.success(res['message'], 'Spotlex');
             }
             else if (res['status'] === false) {
                 this.toastr.error(res['message'], 'Spotlex');
@@ -3300,7 +3325,7 @@ let AuthService = class AuthService {
         this.getSetService = getSetService;
         // public getLoggedInName = new Observable();
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
    * API for Manage Users
@@ -3339,6 +3364,9 @@ let AuthService = class AuthService {
     }
     applyCoupon(couponData) {
         return this.http.post(this.apiUrl + '/api/applycoupon', couponData);
+    }
+    resetPassword(data) {
+        return this.http.post(this.apiUrl + '/api/resetpassword', data);
     }
     checkPostCode(postCode) {
         return this.http.post(this.apiUrl + '/api/checkPostCode', postCode);
@@ -3524,7 +3552,7 @@ let PriceService = class PriceService {
     constructor(http) {
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
    * API for Get Pricing
@@ -3575,7 +3603,7 @@ let ProductCategoryService = class ProductCategoryService {
     constructor(http) {
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
     }
     /*
  * API for Get Category List

@@ -281,7 +281,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"page-header\" filter-color=\"orange\">\r\n    <!-- <div class=\"page-header-image\" style=\"background-image:url('../../../assets/assets/images/login-form-before.png')\"> -->\r\n    <div class=\"container\">\r\n        <section class=\"account_main login_sec\">\r\n            <div class=\"container\">\r\n                <div class=\"account-form login-form\">\r\n                    <div class=\"account-form-inn\">\r\n                        <div class=\"account-title\">\r\n                            <h3>SIGN IN</h3>\r\n                        </div>\r\n                          <div class=\"account-from-block\">\r\n                            <form [formGroup]=\"userLoginForm\" (ngSubmit)=\"getUserLogin()\">\r\n                                <div class=\"form-group\">\r\n                                    <input type=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email address\">\r\n                                </div>\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('email').hasError(validation.type) && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                    [ngClass]=\"{'has-error':userLoginForm.get('email').invalid && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)}\">\r\n                                </div>\r\n                                <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.password\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('password').hasError(validation.type) && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group account-from-btn-block custom-margin\">\r\n                                    <button type=\"submit\" class=\"btn primary_btn nm_btn\">SIGN IN</button>\r\n                                    <a data-target=\"#resetpass\" routerLinkActive=\"active\"  data-toggle=\"modal\"  class=\"link-btn\">Forgot Password?</a>\r\n                                </div>\r\n                            </form>\r\n                        </div>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n<!-- </div> -->\r\n</div>\r\n<!-- <p-toast position=\"top-right\"></p-toast> -->\r\n";
+    __webpack_exports__["default"] = "<div class=\"page-header\" filter-color=\"orange\">\r\n    <!-- <div class=\"page-header-image\" style=\"background-image:url('../../../assets/assets/images/login-form-before.png')\"> -->\r\n    <div class=\"container\">\r\n        <section class=\"account_main login_sec\">\r\n            <div class=\"container\">\r\n                <div class=\"account-form login-form\">\r\n                    <div class=\"account-form-inn\">\r\n                        <div class=\"account-title\">\r\n                            <h3>SIGN IN</h3>\r\n                        </div>\r\n                          <div class=\"account-from-block\">\r\n                            <form [formGroup]=\"userLoginForm\" (ngSubmit)=\"getUserLogin()\">\r\n                                <div class=\"form-group\">\r\n                                    <input type=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email address\">\r\n                                </div>\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('email').hasError(validation.type) && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                    [ngClass]=\"{'has-error':userLoginForm.get('email').invalid && (userLoginForm.get('email').dirty || userLoginForm.get('email').touched)}\">\r\n                                </div>\r\n                                <input type=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.password\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"userLoginForm.get('password').hasError(validation.type) && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group account-from-btn-block custom-margin\">\r\n                                    <button type=\"submit\" class=\"btn primary_btn nm_btn\">SIGN IN</button>\r\n                                    <a data-target=\"#resetpass\" data-toggle=\"modal\" data-target=\"#helpModal\" routerLinkActive=\"active\"  data-toggle=\"modal\"  class=\"link-btn hand\">Forgot Password?</a>\r\n                                </div>\r\n                            </form>\r\n                        </div>\r\n                        <div class=\"modal fade HelpModal\" id=\"helpModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n                            <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\r\n                                <div class=\"modal-content\">\r\n                                <div class=\"modal-header\">\r\n                                    <img src=\"assets/images/Password.png\" class=\"modalChatIcon\" alt=\"\">\r\n                                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n                                    <span aria-hidden=\"true\"><img src=\"assets/images/close.svg\" alt=\"\"></span>\r\n                                    </button>\r\n                                </div>\r\n                                <form [formGroup]=\"resetPasswordForm\" (ngSubmit)=\"sendLink()\">\r\n                                <div class=\"modal-body text-center\">\r\n                                <h3>Enter Your Email</h3>\r\n                                <input type=\"email\" placeholder=\"Email\" formControlName=\"email\" required class=\"form-control\">\r\n                                <div *ngFor=\"let validation of account_validation_messages.email\">\r\n                                    <span class=\"validation-error\"\r\n                                        *ngIf=\"resetPasswordForm.get('email').hasError(validation.type) && (resetPasswordForm.get('email').dirty || resetPasswordForm.get('email').touched)\">*{{validation.message}}</span>\r\n                                </div>\r\n                                <div class=\"form-group\"\r\n                                [ngClass]=\"{'has-error':resetPasswordForm.get('email').invalid && (resetPasswordForm.get('email').dirty || resetPasswordForm.get('email').touched)}\">\r\n                            </div>\r\n                                <button type=\"submit\" class=\"mt-4 mb-3\">SEND RESET LINK</button>\r\n                                </div>\r\n                                </form>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </div>\r\n<!-- </div> -->\r\n</div>\r\n<!-- <p-toast position=\"top-right\"></p-toast> -->\r\n";
     /***/
   },
 
@@ -3718,7 +3718,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSw2QkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxVQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jdXN0b20tbWFyZ2lue1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxufVxyXG5cclxuLmFjY291bnQtZm9ybXtcclxuICAgIG1heC13aWR0aDogNzAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMTAwcHggYXV0byAhaW1wb3J0YW50O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi52YWxpZGF0aW9uLWVycm9yIHtcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4iLCIuY3VzdG9tLW1hcmdpbiB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5hY2NvdW50LWZvcm0ge1xuICBtYXgtd2lkdGg6IDcwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnZhbGlkYXRpb24tZXJyb3Ige1xuICBjb2xvcjogcmVkO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".custom-margin {\n  margin-top: 20px;\n}\n\n.account-form {\n  max-width: 700px;\n  width: 100%;\n  margin: 100px auto !important;\n  position: relative;\n}\n\n.validation-error {\n  color: red;\n}\n\n.hand {\n  cursor: pointer;\n}\n\n.HelpModal .modal-header {\n  justify-content: center;\n  position: relative;\n  border: 0;\n}\n\n.HelpModal .modal-header .modalChatIcon {\n  margin-top: -3.125rem;\n  width: 5.75rem;\n}\n\n.HelpModal .modal-header .close {\n  position: absolute;\n  right: -15px;\n  top: -15px;\n  opacity: 1;\n  padding: 0;\n  margin: 0;\n  width: 2.3125rem;\n}\n\n.HelpModal .modal-header .close img {\n  width: 100%;\n}\n\n.HelpModal .modal-body {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 2rem;\n}\n\n.HelpModal .modal-body a:hover {\n  background: #000;\n  text-decoration: none !important;\n}\n\n.HelpModal .modal-body a {\n  background: #0d92e0;\n  color: #fff;\n  border-radius: 1.875rem;\n  padding: 10px;\n  min-width: 5.625rem;\n  transition: all 0.3s;\n}\n\n.HelpModal .modal-body h3 {\n  color: #cacbcc;\n  font-weight: 700;\n}\n\n.HelpModal .modal-content {\n  border: 0;\n  border-radius: 1.25rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvcHJvamVjdC9mcm9udGVuZC9zcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jdXN0b21lci9sb2dpbi9sb2dpbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSw2QkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxVQUFBO0FDRUo7O0FEQUE7RUFDSSxlQUFBO0FDR0o7O0FEQUE7RUFBeUIsdUJBQUE7RUFBd0Isa0JBQUE7RUFBbUIsU0FBQTtBQ01wRTs7QURMQTtFQUF3QyxxQkFBQTtFQUFzQixjQUFBO0FDVTlEOztBRFRBO0VBQWdDLGtCQUFBO0VBQW1CLFlBQUE7RUFBWSxVQUFBO0VBQVUsVUFBQTtFQUFXLFVBQUE7RUFBVyxTQUFBO0VBQVUsZ0JBQUE7QUNtQnpHOztBRGxCQTtFQUFvQyxXQUFBO0FDc0JwQzs7QURyQkE7RUFBdUIsYUFBQTtFQUFjLHNCQUFBO0VBQXVCLHVCQUFBO0VBQXdCLG1CQUFBO0VBQW9CLG9CQUFBO0FDNkJ4Rzs7QUQ1QkE7RUFBK0IsZ0JBQUE7RUFBaUIsZ0NBQUE7QUNpQ2hEOztBRGhDQTtFQUF5QixtQkFBQTtFQUFvQixXQUFBO0VBQVksdUJBQUE7RUFBd0IsYUFBQTtFQUFjLG1CQUFBO0VBQW9CLG9CQUFBO0FDeUNuSDs7QUR4Q0E7RUFBMEIsY0FBQTtFQUFlLGdCQUFBO0FDNkN6Qzs7QUQ1Q0E7RUFBMEIsU0FBQTtFQUFTLHNCQUFBO0FDaURuQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmN1c3RvbS1tYXJnaW57XHJcbiAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG59XHJcblxyXG4uYWNjb3VudC1mb3Jte1xyXG4gICAgbWF4LXdpZHRoOiA3MDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAxMDBweCBhdXRvICFpbXBvcnRhbnQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLnZhbGlkYXRpb24tZXJyb3Ige1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5oYW5ke1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXJ7anVzdGlmeS1jb250ZW50OiBjZW50ZXI7cG9zaXRpb246IHJlbGF0aXZlO2JvcmRlcjowO31cclxuLkhlbHBNb2RhbCAubW9kYWwtaGVhZGVyIC5tb2RhbENoYXRJY29ue21hcmdpbi10b3A6IC0zLjEyNXJlbTt3aWR0aDogNS43NXJlbTt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAuY2xvc2V7cG9zaXRpb246IGFic29sdXRlO3JpZ2h0Oi0xNXB4O3RvcDotMTVweDtvcGFjaXR5OiAxO3BhZGRpbmc6IDA7bWFyZ2luOiAwO3dpZHRoOiAyLjMxMjVyZW07fVxyXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIgLmNsb3NlIGltZ3t3aWR0aDogMTAwJTt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWJvZHl7ZGlzcGxheTogZmxleDtmbGV4LWRpcmVjdGlvbjogY29sdW1uO2p1c3RpZnktY29udGVudDogY2VudGVyO2FsaWduLWl0ZW1zOiBjZW50ZXI7cGFkZGluZy1ib3R0b206IDJyZW07fVxyXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IGE6aG92ZXJ7YmFja2dyb3VuZDogIzAwMDt0ZXh0LWRlY29yYXRpb246IG5vbmUgIWltcG9ydGFudDt9XHJcbi5IZWxwTW9kYWwgLm1vZGFsLWJvZHkgYXtiYWNrZ3JvdW5kOiAjMGQ5MmUwO2NvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDEuODc1cmVtO3BhZGRpbmc6IDEwcHg7bWluLXdpZHRoOiA1LjYyNXJlbTt0cmFuc2l0aW9uOiBhbGwgLjNzO31cclxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBoM3tjb2xvcjogI2NhY2JjYztmb250LXdlaWdodDogNzAwO31cclxuLkhlbHBNb2RhbCAubW9kYWwtY29udGVudHtib3JkZXI6MDtib3JkZXItcmFkaXVzOiAxLjI1cmVtO31cclxuXHJcbiIsIi5jdXN0b20tbWFyZ2luIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmFjY291bnQtZm9ybSB7XG4gIG1heC13aWR0aDogNzAwcHg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDEwMHB4IGF1dG8gIWltcG9ydGFudDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4udmFsaWRhdGlvbi1lcnJvciB7XG4gIGNvbG9yOiByZWQ7XG59XG5cbi5oYW5kIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBib3JkZXI6IDA7XG59XG5cbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAubW9kYWxDaGF0SWNvbiB7XG4gIG1hcmdpbi10b3A6IC0zLjEyNXJlbTtcbiAgd2lkdGg6IDUuNzVyZW07XG59XG5cbi5IZWxwTW9kYWwgLm1vZGFsLWhlYWRlciAuY2xvc2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAtMTVweDtcbiAgdG9wOiAtMTVweDtcbiAgb3BhY2l0eTogMTtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xuICB3aWR0aDogMi4zMTI1cmVtO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1oZWFkZXIgLmNsb3NlIGltZyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHBhZGRpbmctYm90dG9tOiAycmVtO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1ib2R5IGE6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiAjMDAwO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBhIHtcbiAgYmFja2dyb3VuZDogIzBkOTJlMDtcbiAgY29sb3I6ICNmZmY7XG4gIGJvcmRlci1yYWRpdXM6IDEuODc1cmVtO1xuICBwYWRkaW5nOiAxMHB4O1xuICBtaW4td2lkdGg6IDUuNjI1cmVtO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4zcztcbn1cblxuLkhlbHBNb2RhbCAubW9kYWwtYm9keSBoMyB7XG4gIGNvbG9yOiAjY2FjYmNjO1xuICBmb250LXdlaWdodDogNzAwO1xufVxuXG4uSGVscE1vZGFsIC5tb2RhbC1jb250ZW50IHtcbiAgYm9yZGVyOiAwO1xuICBib3JkZXItcmFkaXVzOiAxLjI1cmVtO1xufSJdfQ== */";
     /***/
   },
 
@@ -3800,6 +3800,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.toastr = toastr;
         this.getSetService = getSetService;
         this.user = [];
+        this.email = '';
         this.account_validation_messages = _services_validation_service__WEBPACK_IMPORTED_MODULE_4__["ValidationService"].account_validation_messages;
         this.data = new Date();
       }
@@ -3816,6 +3817,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             password: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(6)]],
             device_type: 'website',
             device_token: '1234567890'
+          });
+          this.resetPasswordForm = this.formBuilder.group({
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[a-zA-Z0-9_!#$%&\'*+/=? \\"`{|}~^.-]+@[a-zA-Z0-9.-]+$'), _services_validation_service__WEBPACK_IMPORTED_MODULE_4__["ValidationService"].avoidEmptyStrigs]]
           });
         }
       }, {
@@ -3855,6 +3859,41 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }));
           }, function (error) {
             _this23.toastr.error('error', error.error.message);
+          });
+        }
+      }, {
+        key: "sendLink",
+        value: function sendLink() {
+          var _this24 = this;
+
+          if (this.resetPasswordForm.invalid) {
+            this.validateAllFormFields(this.resetPasswordForm);
+            return true;
+          }
+
+          this.authservice.resetPassword(this.resetPasswordForm.value).subscribe(function (res) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this24, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+                while (1) {
+                  switch (_context19.prev = _context19.next) {
+                    case 0:
+                      if (res['status'] === true) {
+                        this.toastr.success(res['message'], 'Spotlex');
+                      } else if (res['status'] === false) {
+                        this.toastr.error(res['message'], 'Spotlex');
+                      } else {
+                        this.toastr.error(res['message'], 'Spotlex');
+                      }
+
+                    case 1:
+                    case "end":
+                      return _context19.stop();
+                  }
+                }
+              }, _callee19, this);
+            }));
+          }, function (error) {
+            _this24.toastr.error('error', error.error.message);
           });
         }
         /**
@@ -4019,7 +4058,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "postCodeRequest",
         value: function postCodeRequest() {
-          var _this24 = this;
+          var _this25 = this;
 
           if (this.noPostCodeForm.invalid) {
             this.validateAllFormFields(this.noPostCodeForm);
@@ -4027,10 +4066,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           this.authservice.postcodeRequest(this.noPostCodeForm.value).subscribe(function (res) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this24, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this25, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+              return regeneratorRuntime.wrap(function _callee20$(_context20) {
                 while (1) {
-                  switch (_context19.prev = _context19.next) {
+                  switch (_context20.prev = _context20.next) {
                     case 0:
                       if (res['status'] === true) {
                         this.toastr.success(res['message'], 'Spotlex');
@@ -4043,13 +4082,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 1:
                     case "end":
-                      return _context19.stop();
+                      return _context20.stop();
                   }
                 }
-              }, _callee19, this);
+              }, _callee20, this);
             }));
           }, function (error) {
-            _this24.toastr.error('error', error.error.message);
+            _this25.toastr.error('error', error.error.message);
           });
         }
         /**
@@ -4258,13 +4297,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getUserData",
         value: function getUserData() {
-          var _this25 = this;
+          var _this26 = this;
 
           this.authservice.getUser().subscribe(function (res) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this25, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
-              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this26, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+              return regeneratorRuntime.wrap(function _callee21$(_context21) {
                 while (1) {
-                  switch (_context20.prev = _context20.next) {
+                  switch (_context21.prev = _context21.next) {
                     case 0:
                       if (res['status'] === true) {
                         this.userData = res['data'];
@@ -4276,10 +4315,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 1:
                     case "end":
-                      return _context20.stop();
+                      return _context21.stop();
                   }
                 }
-              }, _callee20, this);
+              }, _callee21, this);
             }));
           }, function (error) {
             console.log('error', 'Spotlex', error.error.message);
@@ -4288,17 +4327,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getCategoryList",
         value: function getCategoryList() {
-          var _this26 = this;
+          var _this27 = this;
 
           var payload = {
             user_id: this.userData['id']
           };
           this.productCategoryService.getCategoryList(payload).subscribe(function (res) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this26, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this27, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
               var i, obj;
-              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+              return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
-                  switch (_context21.prev = _context21.next) {
+                  switch (_context22.prev = _context22.next) {
                     case 0:
                       if (res['status'] === true) {
                         this.quantityCount = res['quantity_count'];
@@ -4322,10 +4361,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 1:
                     case "end":
-                      return _context21.stop();
+                      return _context22.stop();
                   }
                 }
-              }, _callee21, this);
+              }, _callee22, this);
             }));
           }, function (error) {
             console.log('error', 'Spotlex', error.error.message);
@@ -4334,12 +4373,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getProductByCatId",
         value: function getProductByCatId(id) {
-          var _this27 = this;
+          var _this28 = this;
 
           this.selectedCategory = id;
           this.categories.forEach(function (element) {
             if (element['id'] === id) {
-              _this27.productOfCategory = element['category_product']['data'];
+              _this28.productOfCategory = element['category_product']['data'];
             }
           });
         }
@@ -4365,7 +4404,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "addToCart",
         value: function addToCart(product, value) {
-          var _this28 = this;
+          var _this29 = this;
 
           this.quantity = this.getQuantity(product.id, this.userId);
 
@@ -4391,11 +4430,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             'image': product.image
           };
           this.priceservice.addToCart(payLoad).subscribe(function (res) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this28, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
               var index, prod;
-              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+              return regeneratorRuntime.wrap(function _callee23$(_context23) {
                 while (1) {
-                  switch (_context22.prev = _context22.next) {
+                  switch (_context23.prev = _context23.next) {
                     case 0:
                       if (res['status'] === true) {
                         if (res['CartItem'].length > 0) {
@@ -4425,10 +4464,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 1:
                     case "end":
-                      return _context22.stop();
+                      return _context23.stop();
                   }
                 }
-              }, _callee22, this);
+              }, _callee23, this);
             }));
           }, function (error) {});
         }
@@ -4930,17 +4969,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "signUp",
         value: function signUp() {
-          var _this29 = this;
+          var _this30 = this;
 
           if (this.userSignupForm.invalid) {
             this.validateAllFormFields(this.userSignupForm);
             return true;
           } else {
             this.authservice.login(this.userSignupForm.value).subscribe(function (res) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this29, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
-                return regeneratorRuntime.wrap(function _callee23$(_context23) {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this30, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+                return regeneratorRuntime.wrap(function _callee24$(_context24) {
                   while (1) {
-                    switch (_context23.prev = _context23.next) {
+                    switch (_context24.prev = _context24.next) {
                       case 0:
                         if (res['status'] === true) {
                           this.toastr.success(res['message'], 'Spotlex');
@@ -4950,13 +4989,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                       case 1:
                       case "end":
-                        return _context23.stop();
+                        return _context24.stop();
                     }
                   }
-                }, _callee23, this);
+                }, _callee24, this);
               }));
             }, function (error) {
-              _this29.toastr.error(error.error.message, 'spotlex');
+              _this30.toastr.error(error.error.message, 'spotlex');
             });
           }
         }
@@ -5103,7 +5142,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "calcRoute",
         value: function calcRoute() {
-          var _this30 = this;
+          var _this31 = this;
 
           this.line = new google.maps.Polyline({
             strokeOpacity: 0.5,
@@ -5133,12 +5172,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   var nextSegment = steps[j].path;
 
                   for (var k = 0; k < nextSegment.length; k++) {
-                    _this30.line.getPath().push(nextSegment[k]);
+                    _this31.line.getPath().push(nextSegment[k]);
                   }
                 }
               }
 
-              _this30.initRoute();
+              _this31.initRoute();
             }
           });
         }
@@ -5154,7 +5193,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "mockDirections",
         value: function mockDirections() {
-          var _this31 = this;
+          var _this32 = this;
 
           var locationData = [[51.51324, -0.09909000000000001], [51.51478, -0.08078]];
           console.log(locationData);
@@ -5167,7 +5206,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             map: this.map
           });
           locationArray.forEach(function (l) {
-            return _this31.line.getPath().push(l);
+            return _this32.line.getPath().push(l);
           });
           var start = new google.maps.LatLng(51.513237, -0.099102);
           var end = new google.maps.LatLng(51.514786, -0.080799);
@@ -5187,7 +5226,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "initRoute",
         value: function initRoute() {
-          var _this32 = this;
+          var _this33 = this;
 
           var route = this.line.getPath().getArray(); // options
 
@@ -5217,7 +5256,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.marker.addLocation(route);
           setTimeout(function () {
-            return _this32.play();
+            return _this33.play();
           }, 2000);
         } // play animation
 
@@ -5412,7 +5451,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "intercept",
         value: function intercept(req, next) {
-          var _this33 = this;
+          var _this34 = this;
 
           this.requests.push(req); // console.log(`No of requests--->${this.requests.length}`);
 
@@ -5420,24 +5459,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(function (observer) {
             var subscription = next.handle(req).subscribe(function (event) {
               if (event instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpResponse"]) {
-                _this33.removeRequest(req);
+                _this34.removeRequest(req);
 
                 observer.next(event);
               }
             }, function (err) {
               alert('error' + err);
 
-              _this33.removeRequest(req);
+              _this34.removeRequest(req);
 
               observer.error(err);
             }, function () {
-              _this33.removeRequest(req);
+              _this34.removeRequest(req);
 
               observer.complete();
             }); // remove request from queue when cancelled
 
             return function () {
-              _this33.removeRequest(req);
+              _this34.removeRequest(req);
 
               subscription.unsubscribe();
             };
@@ -5530,7 +5569,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.getSetService = getSetService; // public getLoggedInName = new Observable();
 
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Manage Users
@@ -5592,6 +5631,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.http.post(this.apiUrl + '/api/applycoupon', couponData);
         }
       }, {
+        key: "resetPassword",
+        value: function resetPassword(data) {
+          return this.http.post(this.apiUrl + '/api/resetpassword', data);
+        }
+      }, {
         key: "checkPostCode",
         value: function checkPostCode(postCode) {
           return this.http.post(this.apiUrl + '/api/checkPostCode', postCode);
@@ -5642,16 +5686,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "showToastrMessage",
         value: function showToastrMessage(status, summary, detail) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
-            return regeneratorRuntime.wrap(function _callee24$(_context24) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+            return regeneratorRuntime.wrap(function _callee25$(_context25) {
               while (1) {
-                switch (_context24.prev = _context24.next) {
+                switch (_context25.prev = _context25.next) {
                   case 0:
                   case "end":
-                    return _context24.stop();
+                    return _context25.stop();
                 }
               }
-            }, _callee24);
+            }, _callee25);
           }));
         }
       }, {
@@ -5888,7 +5932,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Get Pricing
@@ -5972,7 +6016,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.11.134.243';
+        this.apiUrl = 'http://3.8.237.213';
       }
       /*
       * API for Get Category List
@@ -6610,10 +6654,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(NavbarComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this34 = this;
+          var _this35 = this;
 
           this.getSetService.getLoggedInStatus().subscribe(function (result) {
-            _this34.loggedIn = result;
+            _this35.loggedIn = result;
           });
           this.authservice.maintainStatus();
           var navbar = this.element.nativeElement;
@@ -6675,13 +6719,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "logOut",
         value: function logOut() {
-          var _this35 = this;
+          var _this36 = this;
 
           this.authservice.logout().subscribe(function (res) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+              return regeneratorRuntime.wrap(function _callee26$(_context26) {
                 while (1) {
-                  switch (_context25.prev = _context25.next) {
+                  switch (_context26.prev = _context26.next) {
                     case 0:
                       if (res['status'] === true) {
                         this.getSetService.setLoggedInStatus(false);
@@ -6696,13 +6740,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 1:
                     case "end":
-                      return _context25.stop();
+                      return _context26.stop();
                   }
                 }
-              }, _callee25, this);
+              }, _callee26, this);
             }));
           }, function (error) {
-            _this35.toastr.error('error', error.error.message);
+            _this36.toastr.error('error', error.error.message);
           });
         }
       }]);

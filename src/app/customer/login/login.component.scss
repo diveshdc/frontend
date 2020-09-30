@@ -11,3 +11,17 @@
 .validation-error {
     color:red;
 }
+.hand{
+    cursor: pointer;
+}
+
+.HelpModal .modal-header{justify-content: center;position: relative;border:0;}
+.HelpModal .modal-header .modalChatIcon{margin-top: -3.125rem;width: 5.75rem;}
+.HelpModal .modal-header .close{position: absolute;right:-15px;top:-15px;opacity: 1;padding: 0;margin: 0;width: 2.3125rem;}
+.HelpModal .modal-header .close img{width: 100%;}
+.HelpModal .modal-body{display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 2rem;}
+.HelpModal .modal-body a:hover{background: #000;text-decoration: none !important;}
+.HelpModal .modal-body a{background: #0d92e0;color: #fff;border-radius: 1.875rem;padding: 10px;min-width: 5.625rem;transition: all .3s;}
+.HelpModal .modal-body h3{color: #cacbcc;font-weight: 700;}
+.HelpModal .modal-content{border:0;border-radius: 1.25rem;}
+

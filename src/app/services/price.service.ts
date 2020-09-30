@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class PriceService {
   public apiUrl = 'localhost:8000';
   constructor( private http: HttpClient) {
-    this.apiUrl = 'http://3.11.134.243';
+    this.apiUrl = 'http://3.8.237.213';
    }
 
    /*

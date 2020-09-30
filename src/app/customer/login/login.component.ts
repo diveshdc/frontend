@@ -14,7 +14,9 @@ import { GetterSetterService } from 'app/services/getter-setter.service';
 })
 export class LoginComponent implements OnInit {
     public userLoginForm: FormGroup;
+    public resetPasswordForm: FormGroup;
     user: any = []
+    email = '';
     public account_validation_messages = ValidationService.account_validation_messages;
 
     data: Date = new Date();
@@ -42,6 +44,12 @@ export class LoginComponent implements OnInit {
             device_type: 'website',
             device_token: '1234567890',
             });
+
+            this.resetPasswordForm = this.formBuilder.group({
+              email: ['', [Validators.required,
+                Validators.pattern('^[a-zA-Z0-9_!#$%&\'*+/=? \\"`{|}~^.-]+@[a-zA-Z0-9.-]+$'),
+                ValidationService.avoidEmptyStrigs]],
+            });
     }
 
     getUserLogin() {
@@ -64,6 +72,28 @@ export class LoginComponent implements OnInit {
           }, (error) => {
             this.toastr.error('error', error.error.message);
           })
+    }
+
+
+
+    sendLink() {
+      if (this.resetPasswordForm.invalid) {
+        this.validateAllFormFields(this.resetPasswordForm);
+        return true;
+      }
+      this.authservice.resetPassword(this.resetPasswordForm.value).subscribe(async res => {
+        if (res['status'] === true) {
+          this.toastr.success(res['message'], 'Spotlex');
+        } else if (res['status'] === false) {
+          this.toastr.error(res['message'], 'Spotlex');
+        } else {
+          this.toastr.error(res['message'], 'Spotlex');
+        }
+      }, (error) => {
+        this.toastr.error('error', error.error.message);
+      })
+
+
     }
       /**
      * Function to validate all form fields

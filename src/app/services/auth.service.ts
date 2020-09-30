@@ -20,7 +20,7 @@ export class AuthService {
 
   public apiUrl = 'localhost:8000';
   constructor( private http: HttpClient, public router: Router, private getSetService: GetterSetterService) {
- this.apiUrl = 'http://3.11.134.243';
+ this.apiUrl = 'http://3.8.237.213';
    }
 
 
@@ -70,6 +70,10 @@ getCartItems(userId) {
 
   applyCoupon(couponData) {
     return this.http.post(this.apiUrl + '/api/applycoupon', couponData);
+  }
+
+  resetPassword(data) {
+    return this.http.post(this.apiUrl + '/api/resetpassword', data);
   }
 
   checkPostCode(postCode) {
