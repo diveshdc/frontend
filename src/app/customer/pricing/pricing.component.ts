@@ -129,7 +129,7 @@ export class PricingComponent implements OnInit {
       }
       this.priceservice.addToCart(payLoad).subscribe(async res => {
         if (res['status'] === true) {
-          if (res['CartItem'].length > 0) {
+          if (res['CartItem'].length >= 0) {
             this.showSpkiItemDiv = false;
           } else {
             this.showSpkiItemDiv = true;
