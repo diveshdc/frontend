@@ -441,7 +441,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\r\n<div class=\"section section-navbars\">\r\n    <div class=\"container\" id=\"menu-dropdown\">\r\n       \r\n                <!--------Header Start---------->\r\n    <nav class=\"navbar navbar-expand-lg\">\r\n        <div class=\"container\">\r\n            <a class=\"navbar-brand\" routerLink=\"/\" routerLinkActive=\"active\"><img src=\"assets/images/logo.png\" alt=\"logo.png\" /></a>\r\n            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n                <ul class=\"navbar-nav\">\r\n                    <li *ngIf=\"!signInButton\" class=\"nav-item \">\r\n                        <a class=\"nav-link\"  routerLink=\"login\" routerLinkActive=\"active\">Sign In</a>\r\n                    </li>\r\n                    <li *ngIf=\"signInButton\" class=\"nav-item \">\r\n                        <a class=\"nav-link\"  routerLink=\"/dashboard\" routerLinkActive=\"active\">My Account</a>\r\n                    </li>\r\n                    <li class=\"nav-item\">\r\n                        <a class=\"nav-link\" routerLink=\"#\" routerLinkActive=\"active\" >Pricing</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <a class=\"nav-link\" href=\"#how-it-works\">DOWNLOAD THE APP</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <!-- <a class=\"nav-link\" routerLink=\"/commercial\" routerLinkActive=\"active\">Commercial</a> -->\r\n                        <a class=\"nav-link\" href=\"http://52.56.145.178/index.php/commercial/\">Commercial</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <!-- <a class=\"nav-link\" routerLink=\"/refer-to-friend\" routerLinkActive=\"active\">Refer a friend</a> -->\r\n                        <a class=\"nav-link\" href=\"http://52.56.145.178/index.php/refer-a-friend\">Refer a friend</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\" *ngIf=\"!signInButton\">\r\n                        <a  class=\"nav-link order_btn\" routerLink=\"/login\" routerLinkActive=\"active\">Order Now</a>\r\n                    </li>\r\n                    <li class=\"nav-item\" *ngIf=\"signInButton\">\r\n                        <a  class=\"nav-link order_btn hand\" (click)=\"logOut()\" routerLinkActive=\"active\">Logout</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n            <!-- End Navbar Transparent-->\r\n       \r\n    </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "\r\n<div class=\"section section-navbars\">\r\n    <div class=\"container\" id=\"menu-dropdown\">\r\n       \r\n                <!--------Header Start---------->\r\n    <nav class=\"navbar navbar-expand-lg\">\r\n        <div class=\"container\">\r\n            <a class=\"navbar-brand\" routerLink=\"/\" routerLinkActive=\"active\"><img src=\"assets/images/logo.png\" alt=\"logo.png\" /></a>\r\n            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n                <ul class=\"navbar-nav\">\r\n                    <li *ngIf=\"!loggedIn\" class=\"nav-item \">\r\n                        <a class=\"nav-link\"  routerLink=\"login\" routerLinkActive=\"active\">Sign In</a>\r\n                    </li>\r\n                    <li *ngIf=\"loggedIn\" class=\"nav-item \">\r\n                        <a class=\"nav-link\"  routerLink=\"/dashboard\" routerLinkActive=\"active\">My Account</a>\r\n                    </li>\r\n                    <li class=\"nav-item\">\r\n                        <a class=\"nav-link\" routerLink=\"#\" routerLinkActive=\"active\" >Pricing</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <a class=\"nav-link\" href=\"#how-it-works\">DOWNLOAD THE APP</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <!-- <a class=\"nav-link\" routerLink=\"/commercial\" routerLinkActive=\"active\">Commercial</a> -->\r\n                        <a class=\"nav-link\" href=\"http://52.56.145.178/index.php/commercial/\">Commercial</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\">\r\n                        <!-- <a class=\"nav-link\" routerLink=\"/refer-to-friend\" routerLinkActive=\"active\">Refer a friend</a> -->\r\n                        <a class=\"nav-link\" href=\"http://52.56.145.178/index.php/refer-a-friend\">Refer a friend</a>\r\n                    </li>\r\n\r\n                    <li class=\"nav-item\" *ngIf=\"!loggedIn\">\r\n                        <a  class=\"nav-link order_btn\" routerLink=\"/login\" routerLinkActive=\"active\">Order Now</a>\r\n                    </li>\r\n                    <li class=\"nav-item\" *ngIf=\"loggedIn\">\r\n                        <a  class=\"nav-link order_btn hand\" (click)=\"logOut()\" routerLinkActive=\"active\">Logout</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n            <!-- End Navbar Transparent-->\r\n       \r\n    </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -576,9 +576,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./services/getter-setter.service */
+    "./src/app/services/getter-setter.service.ts");
+    /* harmony import */
+
+
+    var _services_auth_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./services/auth.service */
+    "./src/app/services/auth.service.ts");
 
     var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(renderer, router, document, element, location, http) {
+      function AppComponent(renderer, router, document, element, location, http, getSetService, authservice) {
         _classCallCheck(this, AppComponent);
 
         this.renderer = renderer;
@@ -587,6 +599,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.element = element;
         this.location = location;
         this.http = http;
+        this.getSetService = getSetService;
+        this.authservice = authservice;
       }
 
       _createClass(AppComponent, [{
@@ -594,6 +608,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this = this;
 
+          this.getSetService.getLoggedInStatus().subscribe(function (result) {
+            _this.loggedIn = result;
+          });
+          this.authservice.maintainStatus();
           var navbar = this.element.nativeElement.children[0].children[0];
           this._router = this.router.events.filter(function (event) {
             return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"];
@@ -664,6 +682,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"]
       }, {
         type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]
+      }, {
+        type: _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"]
+      }, {
+        type: _services_auth_service__WEBPACK_IMPORTED_MODULE_8__["AuthService"]
       }];
     };
 
@@ -676,7 +698,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"])), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], Object, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"], _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]])], AppComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"])), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], Object, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"], _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"], _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_8__["AuthService"]])], AppComponent);
     /***/
   },
 
@@ -855,11 +877,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       ],
       providers: [_services_loader_service__WEBPACK_IMPORTED_MODULE_18__["LoaderService"], primeng_api__WEBPACK_IMPORTED_MODULE_9__["MessageService"], {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HTTP_INTERCEPTORS"],
-        useClass: _interceptor_loader_interceptor_service__WEBPACK_IMPORTED_MODULE_19__["LoaderInterceptor"],
+        useClass: _interceptor_interceptor__WEBPACK_IMPORTED_MODULE_13__["MyInterceptor"],
         multi: true
       }, {
         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HTTP_INTERCEPTORS"],
-        useClass: _interceptor_interceptor__WEBPACK_IMPORTED_MODULE_13__["MyInterceptor"],
+        useClass: _interceptor_loader_interceptor_service__WEBPACK_IMPORTED_MODULE_19__["LoaderInterceptor"],
         multi: true
       }],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
@@ -3761,15 +3783,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var app_services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! app/services/getter-setter.service */
+    "./src/app/services/getter-setter.service.ts");
 
     var LoginComponent = /*#__PURE__*/function () {
-      function LoginComponent(formBuilder, authservice, route, toastr) {
+      function LoginComponent(formBuilder, authservice, route, toastr, getSetService) {
         _classCallCheck(this, LoginComponent);
 
         this.formBuilder = formBuilder;
         this.authservice = authservice;
         this.route = route;
         this.toastr = toastr;
+        this.getSetService = getSetService;
         this.user = [];
         this.account_validation_messages = _services_validation_service__WEBPACK_IMPORTED_MODULE_4__["ValidationService"].account_validation_messages;
         this.data = new Date();
@@ -3805,31 +3834,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 while (1) {
                   switch (_context18.prev = _context18.next) {
                     case 0:
-                      if (!(res['status'] === true)) {
-                        _context18.next = 9;
-                        break;
-                      }
-
-                      this.toastr.success(res['message'], 'Spotlex');
-                      _context18.next = 4;
-                      return this.authservice.showToastrMessage('success', 'User Login', res['message']);
-
-                    case 4:
-                      localStorage.setItem('la_user_token', res['token']);
-                      localStorage.setItem('la_user_token_data', JSON.stringify(res['data']));
-                      this.route.navigate(['/order']);
-                      _context18.next = 10;
-                      break;
-
-                    case 9:
-                      if (res['status'] === false) {
+                      if (res['status'] === true) {
+                        this.toastr.success(res['message'], 'Spotlex');
+                        localStorage.setItem('la_user_token', res['token']);
+                        localStorage.setItem('la_user_token_data', JSON.stringify(res['data']));
+                        this.getSetService.setLoggedInStatus(true);
+                        this.route.navigate(['/order']);
+                      } else if (res['status'] === false) {
                         this.toastr.error(res['message'], 'Spotlex');
                       } else {
-                        console.log(res, 'resres');
                         this.toastr.error(res['message'], 'Spotlex');
                       }
 
-                    case 10:
+                    case 1:
                     case "end":
                       return _context18.stop();
                   }
@@ -3881,6 +3898,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
       }, {
         type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"]
+      }, {
+        type: app_services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"]
       }];
     };
 
@@ -3892,7 +3911,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./login.component.scss */
       "./src/app/customer/login/login.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"]])], LoginComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], app_services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"]])], LoginComponent);
     /***/
   },
 
@@ -5103,10 +5122,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             // Empty response as API KEY EXPIRED
             console.log(response);
 
-            if (status == google.maps.DirectionsStatus.OK) {
+            if (status === google.maps.DirectionsStatus.OK) {
               var legs = response.routes[0].legs;
 
               for (var i = 0; i < legs.length; i++) {
+                // tslint:disable-next-line:prefer-const
                 var steps = legs[i].steps;
 
                 for (var j = 0; j < steps.length; j++) {
@@ -5475,12 +5495,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs/add/operator/map */
+    "./node_modules/rxjs-compat/_esm2015/add/operator/map.js");
+    /* harmony import */
+
+
+    var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/add/operator/catch */
+    "./node_modules/rxjs-compat/_esm2015/add/operator/catch.js");
+    /* harmony import */
+
+
+    var _getter_setter_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./getter-setter.service */
+    "./src/app/services/getter-setter.service.ts"); // Import RxJs required methods
+
 
     var AuthService = /*#__PURE__*/function () {
-      function AuthService(http) {
+      function AuthService(http, router, getSetService) {
         _classCallCheck(this, AuthService);
 
         this.http = http;
+        this.router = router;
+        this.getSetService = getSetService; // public getLoggedInName = new Observable();
+
         this.apiUrl = 'localhost:8000';
         this.apiUrl = 'http://3.11.134.243';
       }
@@ -5527,6 +5575,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "login",
         value: function login(loginData) {
           return this.http.post(this.apiUrl + '/api/login', loginData);
+        }
+      }, {
+        key: "logout",
+        value: function logout() {
+          return this.http.get(this.apiUrl + '/api/logout');
+        }
+      }, {
+        key: "getData",
+        value: function getData() {
+          return JSON.parse(localStorage.getItem('la_user_token'));
         }
       }, {
         key: "applyCoupon",
@@ -5596,6 +5654,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }, _callee24);
           }));
         }
+      }, {
+        key: "maintainStatus",
+        value: function maintainStatus() {
+          var userData = JSON.parse(localStorage.getItem('la_user_token_data'));
+
+          if (userData != null) {
+            this.getSetService.setLoggedInStatus(true);
+          } else {
+            this.getSetService.setLoggedInStatus(false);
+          }
+        }
       }]);
 
       return AuthService;
@@ -5604,12 +5673,124 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     AuthService.ctorParameters = function () {
       return [{
         type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: _getter_setter_service__WEBPACK_IMPORTED_MODULE_6__["GetterSetterService"]
       }];
     };
 
     AuthService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], AuthService);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _getter_setter_service__WEBPACK_IMPORTED_MODULE_6__["GetterSetterService"]])], AuthService);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/getter-setter.service.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/services/getter-setter.service.ts ***!
+    \***************************************************/
+
+  /*! exports provided: GetterSetterService */
+
+  /***/
+  function srcAppServicesGetterSetterServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "GetterSetterService", function () {
+      return GetterSetterService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var GetterSetterService = /*#__PURE__*/function () {
+      function GetterSetterService() {
+        _classCallCheck(this, GetterSetterService);
+
+        this.label = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"]();
+        this.goal = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"]();
+        this.loggedIn = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"]();
+        this.userStatus = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"]();
+      }
+
+      _createClass(GetterSetterService, [{
+        key: "setLabel",
+        value: function setLabel(value) {
+          this.label.next(value);
+        }
+      }, {
+        key: "getLabel",
+        value: function getLabel() {
+          return this.label.asObservable();
+        }
+        /**
+        * Getter method for getting Logged In status
+        */
+
+      }, {
+        key: "getLoggedInStatus",
+        value: function getLoggedInStatus() {
+          return this.loggedIn.asObservable();
+        }
+        /**
+         * Setter method to set Logged In status
+         * @param value
+         */
+
+      }, {
+        key: "setLoggedInStatus",
+        value: function setLoggedInStatus(value) {
+          this.loggedIn.next(value);
+        }
+      }, {
+        key: "setSmartGoal",
+        value: function setSmartGoal(value) {
+          this.goal.next(value);
+        }
+      }, {
+        key: "getSmartGoal",
+        value: function getSmartGoal() {
+          return this.goal.asObservable();
+        }
+      }, {
+        key: "setUser",
+        value: function setUser(value) {
+          this.userStatus.next(value);
+        }
+      }, {
+        key: "getUser",
+        value: function getUser() {
+          return this.userStatus.asObservable();
+        }
+      }]);
+
+      return GetterSetterService;
+    }();
+
+    GetterSetterService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], GetterSetterService);
     /***/
   },
 
@@ -6205,6 +6386,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       _createClass(AuthGuard, [{
+        key: "checkLogin",
+        value: function checkLogin() {
+          var user = localStorage.getItem('la_user_token');
+
+          if (user !== null) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      }, {
         key: "canActivate",
         value: function canActivate(route, state) {
           try {
@@ -6382,30 +6574,50 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! app/services/auth.service */
     "./src/app/services/auth.service.ts");
+    /* harmony import */
+
+
+    var _auth_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../auth.guard */
+    "./src/app/shared/auth.guard.ts");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../../services/getter-setter.service */
+    "./src/app/services/getter-setter.service.ts");
 
     var NavbarComponent = /*#__PURE__*/function () {
-      function NavbarComponent(location, element, router, authservice) {
+      function NavbarComponent(location, element, router, authservice, auth, toastr, getSetService) {
         _classCallCheck(this, NavbarComponent);
 
         this.location = location;
         this.element = element;
         this.router = router;
-        this.authservice = authservice; // tslint:disable-next-line:no-inferrable-types
-
-        this.signInButton = false;
+        this.authservice = authservice;
+        this.auth = auth;
+        this.toastr = toastr;
+        this.getSetService = getSetService;
         this.sidebarVisible = false;
       }
 
       _createClass(NavbarComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
+          var _this34 = this;
+
+          this.getSetService.getLoggedInStatus().subscribe(function (result) {
+            _this34.loggedIn = result;
+          });
+          this.authservice.maintainStatus();
           var navbar = this.element.nativeElement;
           this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-          var userToken = localStorage.getItem('la_user_token');
-
-          if (userToken) {
-            this.signInButton = true;
-          }
         }
       }, {
         key: "sidebarOpen",
@@ -6463,8 +6675,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "logOut",
         value: function logOut() {
-          this.authservice.removeToken();
-          this.router.navigateByUrl('/login');
+          var _this35 = this;
+
+          this.authservice.logout().subscribe(function (res) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+                while (1) {
+                  switch (_context25.prev = _context25.next) {
+                    case 0:
+                      if (res['status'] === true) {
+                        this.getSetService.setLoggedInStatus(false);
+                        this.authservice.removeToken();
+                        this.toastr.success(res['message'], 'Spotlex');
+                        this.router.navigate(['/login']); // this.route.navigate(['/order']);
+                      } else if (res['status'] === false) {
+                        this.toastr.error(res['message'], 'Spotlex');
+                      } else {
+                        this.toastr.error(res['message'], 'Spotlex');
+                      }
+
+                    case 1:
+                    case "end":
+                      return _context25.stop();
+                  }
+                }
+              }, _callee25, this);
+            }));
+          }, function (error) {
+            _this35.toastr.error('error', error.error.message);
+          });
         }
       }]);
 
@@ -6480,6 +6719,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }, {
         type: app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]
+      }, {
+        type: _auth_guard__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"]
+      }, {
+        type: _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"]
       }];
     };
 
@@ -6491,7 +6736,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
       /*! ./navbar.component.scss */
       "./src/app/shared/navbar/navbar.component.scss"))["default"]]
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]])], NavbarComponent);
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"], _auth_guard__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _services_getter_setter_service__WEBPACK_IMPORTED_MODULE_7__["GetterSetterService"]])], NavbarComponent);
     /***/
   },
 
@@ -6576,6 +6821,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "scrollToTop",
         value: function scrollToTop() {
           (function smoothscroll() {
+            // tslint:disable-next-line:prefer-const
             var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 
             if (currentScroll > 0) {
@@ -6599,7 +6845,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }];
     };
 
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])("window:scroll", []), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", []), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ScrolltotopComponent.prototype, "onWindowScroll", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:scroll', []), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", []), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ScrolltotopComponent.prototype, "onWindowScroll", null);
     ScrolltotopComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-scrolltotop',
       template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(

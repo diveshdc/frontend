@@ -11,10 +11,10 @@
       </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li *ngIf="!signInButton" class="nav-item ">
+                    <li *ngIf="!loggedIn" class="nav-item ">
                         <a class="nav-link"  routerLink="login" routerLinkActive="active">Sign In</a>
                     </li>
-                    <li *ngIf="signInButton" class="nav-item ">
+                    <li *ngIf="loggedIn" class="nav-item ">
                         <a class="nav-link"  routerLink="/dashboard" routerLinkActive="active">My Account</a>
                     </li>
                     <li class="nav-item">
@@ -35,10 +35,10 @@
                         <a class="nav-link" href="http://52.56.145.178/index.php/refer-a-friend">Refer a friend</a>
                     </li>
 
-                    <li class="nav-item" *ngIf="!signInButton">
+                    <li class="nav-item" *ngIf="!loggedIn">
                         <a  class="nav-link order_btn" routerLink="/login" routerLinkActive="active">Order Now</a>
                     </li>
-                    <li class="nav-item" *ngIf="signInButton">
+                    <li class="nav-item" *ngIf="loggedIn">
                         <a  class="nav-link order_btn hand" (click)="logOut()" routerLinkActive="active">Logout</a>
                     </li>
                 </ul>

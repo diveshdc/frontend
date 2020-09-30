@@ -63,15 +63,15 @@ import { ToastrModule } from 'ngx-toastr';
     providers: [
         LoaderService,
         MessageService,
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: MyInterceptor,
+          multi: true,
+        },
         { provide: HTTP_INTERCEPTORS,
           useClass: LoaderInterceptor,
           multi: true
-        },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: MyInterceptor,
-      multi: true,
-    },
+        }
     ],
     bootstrap: [AppComponent]
 })

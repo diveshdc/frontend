@@ -4,6 +4,8 @@ import { AuthService } from '../../services/auth.service';
 import { ValidationService } from '../../services/validation.service'
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { GetterSetterService } from 'app/services/getter-setter.service';
+
 
 @Component({
   selector: 'app-login',
@@ -22,7 +24,9 @@ export class LoginComponent implements OnInit {
     constructor(private formBuilder: FormBuilder,
                 private authservice: AuthService,
                 private route: Router,
-                private toastr: ToastrService) { }
+                private toastr: ToastrService,
+                private getSetService: GetterSetterService
+                ) { }
 
     ngOnInit() {
         const body = document.getElementsByTagName('body')[0];
@@ -48,14 +52,13 @@ export class LoginComponent implements OnInit {
         this.authservice.login(this.userLoginForm.value).subscribe(async res => {
             if (res['status'] === true) {
               this.toastr.success(res['message'], 'Spotlex');
-              await this.authservice.showToastrMessage('success', 'User Login', res['message']);
                 localStorage.setItem('la_user_token', res['token']);
                 localStorage.setItem('la_user_token_data', JSON.stringify(res['data']));
+                this.getSetService.setLoggedInStatus(true);
                 this.route.navigate(['/order']);
             } else if (res['status'] === false) {
               this.toastr.error(res['message'], 'Spotlex');
             } else {
-              console.log(res, 'resres')
               this.toastr.error(res['message'], 'Spotlex');
             }
           }, (error) => {

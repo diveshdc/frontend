@@ -10,17 +10,12 @@ declare var google: any;
   styleUrls: ['./track-driver.component.css']
 })
 export class TrackDriverComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
     // google maps zoom level
     // tslint:disable-next-line:member-ordering
-    zoom: number = 15;
+    zoom: Number = 15;
     // initial center position for the map
-    lat: number = 51.512802;
-    lng: number = -0.091324;
+    lat: Number = 51.512802;
+    lng: Number = -0.091324;
     map: any;
     line: any;
     directionsService: any;
@@ -28,6 +23,11 @@ export class TrackDriverComponent implements OnInit {
 
     // speedMultiplier to control animation speed
     speedMultiplier = 1;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
     onMapReady(map: any) {
       console.log(map);
@@ -56,21 +56,22 @@ export class TrackDriverComponent implements OnInit {
       const start = new google.maps.LatLng(51.513237, -0.099102);
       const end = new google.maps.LatLng(51.514786, -0.080799);
       const request = {
-          origin:start,
-          destination:end,
+          origin: start,
+          destination: end,
           travelMode: google.maps.TravelMode.BICYCLING
       };
       this.directionsService = new google.maps.DirectionsService();
       this.directionsService.route(request, (response, status) => {
         // Empty response as API KEY EXPIRED
         console.log(response);
-        if (status == google.maps.DirectionsStatus.OK) {
-          var legs = response.routes[0].legs;
-          for (let i=0;i<legs.length; i++) {
-            var steps = legs[i].steps;
-            for (let j=0; j<steps.length; j++) {
-              var nextSegment = steps[j].path;
-              for (let k=0; k<nextSegment.length; k++) {
+        if (status === google.maps.DirectionsStatus.OK) {
+          const legs = response.routes[0].legs;
+          for (let i = 0; i < legs.length; i++) {
+            // tslint:disable-next-line:prefer-const
+            let steps = legs[i].steps;
+            for (let j = 0; j < steps.length; j++) {
+              const nextSegment = steps[j].path;
+              for (let k = 0; k < nextSegment.length; k++) {
                 this.line.getPath().push(nextSegment[k]);
               }
             }
@@ -90,7 +91,7 @@ export class TrackDriverComponent implements OnInit {
 
     // mock directions api
     mockDirections() {
-     let locationData=[[51.51324,-0.09909000000000001],[51.51478,-0.08078]]
+     const locationData = [[51.51324, -0.09909000000000001], [51.51478, -0.08078]]
      console.log(locationData);
      const locationArray = locationData.map(l => new google.maps.LatLng(l[0], l[1]));
       this.line = new google.maps.Polyline({
@@ -118,7 +119,7 @@ export class TrackDriverComponent implements OnInit {
         speed: 50,  // default 10 , animation speed
         interval: 10, // default 10, marker refresh time
         speedMultiplier: this.speedMultiplier,
-        markerOptions: { 
+        markerOptions: {
           title: 'Travel Marker',
           animation: google.maps.Animation.DROP,
           icon: {
@@ -171,13 +172,13 @@ export class TrackDriverComponent implements OnInit {
 
     // fast forward
     fast() {
-      this.speedMultiplier*=2;
+      this.speedMultiplier *= 2;
       this.marker.setSpeedMultiplier(this.speedMultiplier);
     }
 
     // slow motion
     slow() {
-      this.speedMultiplier/=2;
+      this.speedMultiplier /= 2;
       this.marker.setSpeedMultiplier(this.speedMultiplier)
     }
 

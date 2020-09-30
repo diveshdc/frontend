@@ -6,6 +6,8 @@ import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClient } from '@angular/common/http';
+import { GetterSetterService } from './services/getter-setter.service';
+import { AuthService } from './services/auth.service';
 
 
 @Component({
@@ -14,6 +16,8 @@ import { HttpClient } from '@angular/common/http';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+    loggedIn: boolean;
+    userData: any;
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
     constructor( private renderer: Renderer2,
@@ -23,10 +27,17 @@ export class AppComponent implements OnInit {
                  private element: ElementRef,
                  public location: Location,
                  public http: HttpClient,
+                 private getSetService: GetterSetterService,
+                 private authservice: AuthService,
                  ) {
 
                  }
     ngOnInit() {
+        this.getSetService.getLoggedInStatus()
+        .subscribe((result) => {
+          this.loggedIn = result;
+        })
+      this.authservice.maintainStatus();
         const navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (window.outerWidth > 991) {
