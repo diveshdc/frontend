@@ -5569,7 +5569,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.getSetService = getSetService; // public getLoggedInName = new Observable();
 
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.11.134.243';
       }
       /*
       * API for Manage Users
@@ -5932,7 +5932,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.11.134.243';
       }
       /*
       * API for Get Pricing
@@ -6016,7 +6016,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.apiUrl = 'localhost:8000';
-        this.apiUrl = 'http://3.8.237.213';
+        this.apiUrl = 'http://3.11.134.243';
       }
       /*
       * API for Get Category List
