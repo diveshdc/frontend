@@ -1,0 +1,140 @@
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search {
+    position: relative;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    align-items: center;
+    justify-content: center;
+}
+
+.require-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    h3 {
+        font-size: 34px;
+        color: #000;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+    }
+}
+
+.search-wrap {
+    margin-left: 50px;
+    max-width: 350px;
+    width: 100%;
+    .form-control {
+        border: 0;
+        border-bottom: 1px solid #cacaca;
+        border-radius: 0;
+    }
+}
+
+.icon-wrap {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00adee;
+    border: 2px solid transparent;
+    margin: 0 auto !important;
+    @include breakpoint(desktop) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.icon-box-wrap {
+    text-align: center;
+    h3 {
+        margin-top: 20px;
+        font-weight: $font-weight-medium;
+        color: #484848;
+        font-size: 16px;
+        @include breakpoint(desktop) {
+            font-size: 14px;
+        }
+    }
+}
+
+.price-list-wrap {
+    .nav {
+        justify-content: center;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            z-index: -1;
+            right: -100%;
+            background-color: #f1f1f1;
+        }
+        .nav-item {
+            margin-right: 45px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include breakpoint(desktop) {
+                margin-right: 10px;
+                width: 90px;
+            }
+        }
+        .nav-link {
+            padding: 0;
+            &.active {
+                .icon-wrap {
+                    border-color: #14618e;
+                }
+            }
+        }
+    }
+    .tab-content {
+        padding: 40px 0;
+    }
+}
+
+.price-list-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+        color: #484848;
+        font-size: 16px;
+        font-family: $sans-poppins;
+        font-weight: $font-weight-normal;
+    }
+}
+
+.price-list-box {
+    ul {
+        li {
+            border-bottom: 1px solid #d7d7d7;
+            padding: 20px 0;
+        }
+    }
+}
+
+.find-looking-wrap {
+    margin: 80px 0 0;
+} 

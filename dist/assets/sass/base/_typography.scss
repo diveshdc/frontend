@@ -1,0 +1,10 @@
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight:$font-weight-light;
+    color: $color-text;
+    @include breakpoint(desktop) {
+        font-size: 15px;
+    }
+}
