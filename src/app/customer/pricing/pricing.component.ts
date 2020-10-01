@@ -114,6 +114,7 @@ export class PricingComponent implements OnInit {
           this.quantity--;
         }
       } else if (value === 'plus') {
+        console.log('fffffffffffffff')
         this.quantity = 1
  }
       const payLoad = {

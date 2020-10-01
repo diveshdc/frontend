@@ -20,7 +20,7 @@ export class AuthService {
 
   public apiUrl = 'localhost:8000';
   constructor( private http: HttpClient, public router: Router, private getSetService: GetterSetterService) {
- this.apiUrl = 'http://3.11.134.243';
+ this.apiUrl = 'http://127.0.0.1:8000';
    }
 
 
