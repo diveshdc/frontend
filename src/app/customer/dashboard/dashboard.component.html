@@ -91,7 +91,7 @@
                         </button>
                     </div>
                     <div class="modal-body text-center">
-                    <h3>How Can We Help?</h3>
+                    <h3>HOW CAN WE HELP?</h3>
                     <a href="mailto:info@spotlex.co.uk?subject=Feedback"  target="blank" class="mt-4 mb-3">SEND US AN EMAIL</a>
                     <a href="">FAQ</a>
                     </div>
@@ -542,15 +542,13 @@
                         </div>
                         <div class="col-md-5 offset-md-1">
                             <div class="reger-frient-content">
-                                <h4>Refer friends now</h4>
+                                <h4>refer your friends now</h4>
                                 <p>When your friend completes their first Spotlex order using your referral code, you'll
                                     receive £10 of Spotlex credit</p>
 
                                 <div class="newsletter-wrap">
-                                    <form>
-                                        <input type="text" class="form-control" value="ORDER1" readonly />
-                                        <button type="button" class="btn primary_btn">Copy</button>
-                                    </form>
+                                        <input type="text" class="form-control"  [(ngModel)]="referal_code"  value="ORDER1" readonly />
+                                        <button (click)="copyMessage()" type="button" class="btn primary_btn">Copy</button>
                                 </div>
                             </div>
                         </div>

@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+   referal_code = 'ORDER1';
     post_code: String = '';
    userInfoForm: FormGroup;
   public account_validation_messages = ValidationService.account_validation_messages;
@@ -153,6 +154,22 @@ export class DashboardComponent implements OnInit {
       control.markAsTouched({ onlySelf: true });
       control.markAsDirty({ onlySelf: true });
     });
+  }
+
+
+  copyMessage(val: string) {
+    console.log('sdasdsad');
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
   }
 
 }
