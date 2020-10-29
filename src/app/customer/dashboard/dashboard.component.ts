@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-   referal_code = 'ORDER1';
+   referal_code : any;
     post_code: String = '';
    userInfoForm: FormGroup;
   public account_validation_messages = ValidationService.account_validation_messages;
@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   fullAddress: any;
   userName: any;
   currentOrders: any;
+  userData: any;
   constructor(private formBuilder: FormBuilder, private authservice: AuthService, private route: Router,  private toastr: ToastrService) {
     this.userInfoForm = this.formBuilder.group({
       email: ['', [Validators.required,
@@ -44,6 +45,8 @@ export class DashboardComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.userData = JSON.parse(localStorage.getItem('la_user_token_data'));
+    this.referal_code = this.userData.referral_code;
     this.getUserData();
   }
 
@@ -103,6 +106,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
+
   checkPostCode() {
     this.authservice.checkPostCode({post_code: this.post_code}).subscribe(async res => {
       if (res['status'] === true) {
@@ -158,18 +162,20 @@ export class DashboardComponent implements OnInit {
 
 
   copyMessage(val: string) {
-    console.log('sdasdsad');
+
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = val;
+    selBox.value = this.referal_code;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+    console.log(selBox.value);
+   this.toastr.success(selBox.value + 'Code Copied !', 'Spotlex');
   }
 
 }

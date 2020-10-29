@@ -18,4 +18,8 @@ export class ProductCategoryService {
  getCategoryList(userId) {
   return this.http.post(this.apiUrl + '/api/getcategory_list', userId);
 }
+
+getTotalcartCount(data){
+  return this.http.post(this.apiUrl + '/api/get_total_count', data);
+}
 }

@@ -16,11 +16,13 @@ export class PricingComponent implements OnInit {
   userData: any;
   quantity: any = 0;
   selectedCategory: any;
+  totalAmount:any= 0;
   badgeCount: any;
   userId: any;
   quantityCount: any;
   showSpkiItemDiv: Boolean = false;
   minValue = 15;
+  userDetails: any;
   constructor(
       private productCategoryService: ProductCategoryService,
       private priceservice: PriceService,
@@ -29,6 +31,18 @@ export class PricingComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUserData();
+    this.totalCartTotal();
+  }
+
+  totalCartTotal(){
+    this.userDetails = JSON.parse(localStorage.getItem('la_user_token_data'));
+    this.productCategoryService.getTotalcartCount({'user_id':this.userDetails.id}).subscribe(res=>{
+      if(res['status']=='success'){
+         this.totalAmount = res['data'];
+      }else{
+
+      }
+    })
   }
 
   onScroll(e) {
@@ -94,6 +108,7 @@ export class PricingComponent implements OnInit {
     }
 
     getQuantity(productId, userId) {
+      console.log(this.quantityCount);
       if (this.quantityCount.length <= 0 || this.quantityCount.length === '') {
         this.showSpkiItemDiv = false;
       }
@@ -107,16 +122,15 @@ export class PricingComponent implements OnInit {
 
     addToCart(product, value) {
       this.quantity = this.getQuantity(product.id, this.userId)
-      if (this.quantity && this.quantity > 0) {
+      // if (this.quantity && this.quantity > 0) {
         if (value === 'plus') {
-          this.quantity++;
-        } else if (value === 'minus') {
-          this.quantity--;
+          this.quantity=this.quantity+1;
         }
-      } else if (value === 'plus') {
-        console.log('fffffffffffffff')
-        this.quantity = 1
- }
+        if (value === 'minus') {
+          this.quantity=this.quantity-1;
+        }
+      // } 
+ 
       const payLoad = {
         'user_id': this.userData.id,
         'product_id': product.id,
@@ -128,8 +142,13 @@ export class PricingComponent implements OnInit {
         'description': product.description,
         'image': product.image,
       }
+      console.log(payLoad);
+
       this.priceservice.addToCart(payLoad).subscribe(async res => {
         if (res['status'] === true) {
+          console.log(res);
+          this.getCategoryList();
+          this.totalCartTotal();
           if (res['CartItem'].length >= 0) {
             this.showSpkiItemDiv = false;
           } else {

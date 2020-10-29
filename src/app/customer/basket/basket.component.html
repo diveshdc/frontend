@@ -281,7 +281,7 @@
                                 <td class="prodImg" width="50"><img src="{{cartData.image}}" alt=""></td>
                                 <td><a>{{cartData.quantity}}x</a></td>
                                 <td>{{cartData.name}}</td>
-                                <td class="text-right">£ {{cartData.sale_price ? cartData.sale_price :cartData.price}}</td>
+                                <td class="text-right">£ {{cartData.price ? cartData.price :cartData.sale_price}}</td>
                                 <td class="text-right actionCol"> 
                                     <a class="hand" (click)="removeItem(cartData.id,i)"><i class="fa fa-times"></i></a>
                                 </td>

@@ -63,14 +63,13 @@ export class BasketComponent implements OnInit {
     this.authservice.getCartItems(userId).subscribe(async res => {
       if (res['status'] === true) {
             this.CartItemsData = res['CartData'];
+            console.log('cartItems',this.CartItemsData);
               this.totalItems = res['quantity_count'];
-              this.totalPrice = 0;
+              this.totalPrice = 0.0;
               res['CartData'].forEach(element => {
+               console.log(element);
                 let total = 0;
-                for (let i = 0; i < element.price.length; i++) {
-                  total += element.price[i];
-                }
-                this.totalPrice = total;
+                this.totalPrice =this.totalPrice + (parseFloat(element.price)*parseInt(element.quantity));
               });
       } else {
 
