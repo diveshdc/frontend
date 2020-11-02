@@ -16,7 +16,7 @@ export class PricingComponent implements OnInit {
   userData: any;
   quantity: any = 0;
   selectedCategory: any;
-  totalAmount:any= 0;
+  totalAmount: any = 0;
   badgeCount: any;
   userId: any;
   quantityCount: any;
@@ -34,12 +34,12 @@ export class PricingComponent implements OnInit {
     this.totalCartTotal();
   }
 
-  totalCartTotal(){
+  totalCartTotal() {
     this.userDetails = JSON.parse(localStorage.getItem('la_user_token_data'));
-    this.productCategoryService.getTotalcartCount({'user_id':this.userDetails.id}).subscribe(res=>{
-      if(res['status']=='success'){
+    this.productCategoryService.getTotalcartCount({'user_id': this.userDetails.id}).subscribe(res => {
+      if (res['status'] == 'success') {
          this.totalAmount = res['data'];
-      }else{
+      } else {
 
       }
     })
@@ -124,13 +124,13 @@ export class PricingComponent implements OnInit {
       this.quantity = this.getQuantity(product.id, this.userId)
       // if (this.quantity && this.quantity > 0) {
         if (value === 'plus') {
-          this.quantity=this.quantity+1;
+          this.quantity = this.quantity + 1;
         }
         if (value === 'minus') {
-          this.quantity=this.quantity-1;
+          this.quantity = this.quantity - 1;
         }
-      // } 
- 
+      // }
+
       const payLoad = {
         'user_id': this.userData.id,
         'product_id': product.id,
